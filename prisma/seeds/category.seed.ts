@@ -37,6 +37,10 @@ const categoryData: Prisma.CategoryCreateInput[] = [
 export default async function main(prisma: PrismaClient) {
     // Seed category
     for (const category of categoryData) {
-        await prisma.category.create({ data: category })
+        await prisma.category.upsert({
+            where: { name: category.name },
+            update: {},
+            create: category
+        })
     }
 }
