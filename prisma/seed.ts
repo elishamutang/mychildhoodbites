@@ -16,4 +16,4 @@ async function runSeeds() {
 
 runSeeds()
     .catch(console.error)
-    .finally(() => prisma.$disconnect())
+    .finally(async () => await prisma.$disconnect())
