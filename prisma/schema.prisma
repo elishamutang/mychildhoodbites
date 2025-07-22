@@ -19,6 +19,7 @@ model User {
   id Int @id @default(autoincrement())
   name String @db.VarChar(255)
   email String @unique @db.VarChar(255)
+  password String @db.VarChar(255)
   countryId Int 
   Country Country @relation(fields: [countryId], references: [id])
   Collection Collection[]
@@ -26,7 +27,7 @@ model User {
 
 model Country {
   id Int @id @default(autoincrement())
-  name String @db.Text()
+  name String @unique @db.Text()
   countryCode String @db.Text()
   flag String @db.VarChar(255)
   region String? @db.Text()
@@ -36,7 +37,7 @@ model Country {
 
 model Product {
   id Int @id @default(autoincrement())
-  name String @db.VarChar(255)
+  name String @unique @db.VarChar(255)
   image String? @db.VarChar(255)
   whereToBuy String? @db.VarChar(255)
   countryId Int
@@ -49,7 +50,7 @@ model Product {
 
 model Category {
   id Int @id @default(autoincrement())
-  name String @db.VarChar(255)
+  name String @unique @db.VarChar(255)
   Product Product[]
 }
 
