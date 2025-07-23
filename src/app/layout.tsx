@@ -29,12 +29,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable}  antialiased border flex flex-col items-center`}
+        className={`${geistSans.variable} ${geistMono.variable} relative antialiased`}
       >
-        <main className="relative border border-black w-full md:max-w-[80%]">
+        <main className="h-screen border p-4 flex flex-col mx-auto justify-between w-full md:max-w-[80%]">
           <MantineProvider>
             <Header />
-            {children}
+            <section className="flex flex-col items-center justify-start text-3xl p-5 border rounded-lg h-full w-full text-center my-3">
+              {children}
+            </section>
             <Footer />
           </MantineProvider>
         </main>
