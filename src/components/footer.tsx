@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="border font-inter font-semibold rounded-lg w-full text-center">
       <BlurFade inView delay={0.25} className="border border-transparent">
-        made by{" "}
+        Designed and developed by{" "}
         <a
           href="https://elishamutang.xyz"
           target="_blank"
