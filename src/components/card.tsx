@@ -5,6 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 import AisKrim from "../../public/images/products/high-res-ais-krim.png";
 import { Country, Category } from "../../generated/prisma";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 type Product = {
   id: number;
@@ -42,14 +47,21 @@ export default function Card({ product }: { product: Product }) {
         <div className="flex flex-col gap-2">
           <div className="flex justify-between gap-2 w-full">
             <h1 className="font-semibold truncate">{product.name}</h1>
-            <Image
-              loading="lazy"
-              src={product.Country.flag}
-              width={35}
-              height={35}
-              alt="Country flag"
-              className="drop-shadow-xl/20"
-            />
+
+            {/* Flag */}
+            <Tooltip>
+              <TooltipTrigger>
+                <Image
+                  loading="lazy"
+                  src={product.Country.flag}
+                  width={35}
+                  height={35}
+                  alt="Country flag"
+                  className="drop-shadow-xl/20"
+                />
+              </TooltipTrigger>
+              <TooltipContent>{product.Country.name}</TooltipContent>
+            </Tooltip>
           </div>
           <p className="text-zinc-400 h-[60px] truncate">
             {product.description}
