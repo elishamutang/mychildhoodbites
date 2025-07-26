@@ -3,7 +3,7 @@ import { BlurFade } from "./magicui/blur-fade";
 export default function Footer() {
   return (
     <footer className="border border-zinc-300 font-inter font-semibold rounded-lg w-full text-center">
-      <BlurFade inView delay={0.25} className="border border-transparent">
+      <BlurFade inView className="border border-transparent">
         Designed and developed by{" "}
         <a
           href="https://elishamutang.xyz"
