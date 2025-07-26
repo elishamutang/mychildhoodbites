@@ -38,6 +38,7 @@ model Country {
 model Product {
   id Int @id @default(autoincrement())
   name String @unique @db.VarChar(255)
+  description String? @db.VarChar(255)
   image String? @db.VarChar(255)
   whereToBuy String? @db.VarChar(255)
   countryId Int
