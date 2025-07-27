@@ -12,7 +12,6 @@ export default function Nav() {
     <>
       <Burger
         className="mx-2 z-2 md:hidden"
-        color={opened ? "white" : "black"}
         opened={opened}
         onClick={toggle}
         aria-label="Toggle navigation"
@@ -36,8 +35,8 @@ export default function Nav() {
       {/* Show overlay */}
       <nav
         className={`${
-          opened ? "top-0" : "-top-500"
-        } left-0 z-1 ease-in-out transition-all gap-3 duration-300 flex flex-col items-center justify-center bg-slate-500 text-white absolute w-full h-full`}
+          opened ? "top-0 backdrop-blur-xs" : "-top-500"
+        } left-0 z-1 ease-in-out transition-all gap-3 duration-300 flex flex-col items-center justify-center bg-white text-black absolute w-full h-screen`}
       >
         <h1 className="text-2xl font-inter font-bold">Products</h1>
         <h1 className="text-2xl font-inter font-bold">Categories</h1>
