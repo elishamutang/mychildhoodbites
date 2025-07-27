@@ -1,8 +1,6 @@
 import Heading from "@/components/heading";
-import { PrismaClient } from "../../../generated/prisma";
+import { prisma } from "@/lib/prisma";
 import Card from "@/components/card";
-
-const prisma = new PrismaClient();
 
 export default async function Page() {
   const products = await prisma.product.findMany({
