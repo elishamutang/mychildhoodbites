@@ -60,6 +60,7 @@ export default function Nav() {
         <Link
           href="/categories"
           className="text-2xl font-inter font-bold text-green-600"
+          onClick={handleClick}
         >
           Categories
         </Link>
