@@ -1,15 +1,10 @@
-"use client";
-
 import { BlurFade } from "./magicui/blur-fade";
 import Link from "next/link";
 import Image from "next/image";
 import AisKrim from "../../public/images/products/high-res-ais-krim.png";
 import { Country, Category } from "../../generated/prisma";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import Flag from "./flag";
+import getProductImg from "@/lib/getProductImg";
 
 type Product = {
   id: number;
@@ -25,7 +20,9 @@ type Product = {
   updatedAt: Date;
 };
 
-export default function Card({ product }: { product: Product }) {
+export default async function Card({ product }: { product: Product }) {
+  const imgSrc = await getProductImg(product.name);
+
   return (
     <BlurFade
       inView
@@ -35,10 +32,12 @@ export default function Card({ product }: { product: Product }) {
       {/* Image */}
       <div className="row-span-2">
         <Image
-          src={AisKrim}
+          src={imgSrc ?? AisKrim}
+          width={600}
+          height={600}
           alt="Snack"
           loading="lazy"
-          className="border-b border-zinc-500 rounded-t-md w-full h-full aspect-square"
+          className="border-b  rounded-t-md w-full h-full aspect-square"
         />
       </div>
 
@@ -49,19 +48,10 @@ export default function Card({ product }: { product: Product }) {
             <h1 className="font-semibold truncate">{product.name}</h1>
 
             {/* Flag */}
-            <Tooltip>
-              <TooltipTrigger>
-                <Image
-                  loading="lazy"
-                  src={product.Country.flag}
-                  width={35}
-                  height={35}
-                  alt="Country flag"
-                  className="drop-shadow-xl/20"
-                />
-              </TooltipTrigger>
-              <TooltipContent>{product.Country.name}</TooltipContent>
-            </Tooltip>
+            <Flag
+              flag={product.Country.flag}
+              countryName={product.Country.name}
+            />
           </div>
           <p className="text-zinc-400 h-[60px] truncate">
             {product.description}
