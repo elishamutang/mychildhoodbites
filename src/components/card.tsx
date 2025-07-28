@@ -10,6 +10,7 @@ type Product = {
   id: number;
   name: string;
   description?: string | null;
+  lore?: string | null;
   image?: string | null;
   whereToBuy?: string | null;
   countryId: number;
