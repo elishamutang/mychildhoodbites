@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "mychildhoodgrocer.",
+  title: "mychildhoodbites.",
   description: "Trip down to memory lane.",
 };
 
