@@ -46,7 +46,7 @@ export default async function Card({ product }: { product: Product }) {
       <div className="p-2 flex flex-col truncate">
         <div className="flex flex-col gap-2">
           <div className="flex justify-between gap-2 w-full">
-            <h1 className="font-semibold truncate">{product.name}</h1>
+            <h1 className="font-extrabold truncate">{product.name}</h1>
 
             {/* Flag */}
             <Flag
@@ -54,18 +54,19 @@ export default async function Card({ product }: { product: Product }) {
               countryName={product.Country.name}
             />
           </div>
-          <p className="text-zinc-400 h-[60px] truncate">
+          <p className="text-zinc-500 h-[50px] mb-2 text-wrap overflow-hidden line-clamp-2">
             {product.description}
           </p>
         </div>
 
         <div className="flex justify-between">
-          <div className="text-xs border rounded-md p-1">
+          <div className="text-xs border rounded-md p-1 font-semibold hover:text-white hover:bg-blue-600 transition duration-150">
             {product.Category.name}
           </div>
           <Link
+            scroll={false}
             href={`/products/${product.id}`}
-            className="text-xs border rounded-md py-1 px-2"
+            className="text-xs border rounded-md py-1 px-2 hover:text-white font-semibold hover:bg-green-700 transition duration-150"
           >
             View
           </Link>
