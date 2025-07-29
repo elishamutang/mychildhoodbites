@@ -26,8 +26,19 @@ export default async function Page({
   const imgSrc = await getProductImg(product.name);
 
   return (
-    <section className="font-inter flex flex-col gap-4 border md:border rounded-lg p-5">
-      <h1 className="font-extrabold text-4xl">{product.name}</h1>
+    <section className="font-inter flex flex-col gap-5 border md:border rounded-lg p-5">
+      {/* Title */}
+      <h1 className="font-extrabold text-5xl">
+        {product.name}
+        <span className="text-green-600">.</span>
+      </h1>
+
+      {/* Category */}
+      <section className="border w-max px-2 py-1 rounded-sm bg-blue-600 font-semibold text-white text-xs">
+        {product.Category.name}
+      </section>
+
+      {/* Image */}
       {imgSrc && (
         <Image
           src={imgSrc}
@@ -37,7 +48,18 @@ export default async function Page({
           priority={true}
         />
       )}
-      <p>{product.description}</p>
+
+      {/* Brief Description */}
+      <section className="flex flex-col gap-2">
+        <h2 className="text-3xl font-bold">Description</h2>
+        <p>{product.description}</p>
+      </section>
+
+      {/* Lore */}
+      <section className="flex flex-col gap-2">
+        <h2 className="text-3xl font-bold">Lore</h2>
+        <p>{product.lore}</p>
+      </section>
     </section>
   );
 }
