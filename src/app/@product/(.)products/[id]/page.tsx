@@ -9,6 +9,7 @@ import {
 import getProductImg from "@/lib/getProductImg";
 import { prisma } from "@/lib/prisma";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Page({
   params,
@@ -35,23 +36,40 @@ export default async function Page({
   return (
     <Dialog defaultOpen={true}>
       <form className="hidden absolute">
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="sm:max-w-[425px] font-inter">
           <DialogHeader>
             <DialogTitle className="text-3xl md:text-4xl font-bold text-start md:text-center">
               {product.name}
             </DialogTitle>
-            <Image
-              className="self-center"
-              src={imgSrc ?? ""}
-              width={400}
-              height={400}
-              alt={product.name}
-            />
+            {imgSrc && (
+              <Image
+                objectFit="contain"
+                className="self-center"
+                src={imgSrc ?? null}
+                width={400}
+                height={400}
+                alt={product.name}
+              />
+            )}
+            <h2 className="text-lg font-semibold">Description</h2>
             <DialogDescription className="text-start">
               {product.description}
             </DialogDescription>
+
+            <h2 className="text-lg font-semibold">Lore</h2>
+            <DialogDescription className="text-start">
+              {product.lore}
+            </DialogDescription>
           </DialogHeader>
-          <DialogFooter></DialogFooter>
+          <DialogFooter>
+            <Link
+              className="text-sm border border-zinc-300 px-2 rounded-sm hover:font-semibold hover:text-white hover:bg-green-700 transition duration-200"
+              href={`/products/${id}`}
+              target="_blank"
+            >
+              Read More
+            </Link>
+          </DialogFooter>
         </DialogContent>
       </form>
     </Dialog>
