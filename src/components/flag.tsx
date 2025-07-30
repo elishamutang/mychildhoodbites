@@ -6,24 +6,22 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import Image from "next/image";
+import type { ImageProps } from "next/image";
 
-type FlagProps = {
-  flag: string;
+interface FlagImageProps extends ImageProps {
+  tooltipWidth?: string;
   countryName: string;
-};
+}
 
-export default function Flag({ flag, countryName }: FlagProps) {
+export default function Flag({
+  tooltipWidth,
+  countryName,
+  ...props
+}: FlagImageProps) {
   return (
     <Tooltip>
-      <TooltipTrigger>
-        <Image
-          loading="lazy"
-          src={flag}
-          width={35}
-          height={35}
-          alt="Country flag"
-          className="drop-shadow-xl/20"
-        />
+      <TooltipTrigger className={tooltipWidth}>
+        <Image loading="lazy" {...props} />
       </TooltipTrigger>
       <TooltipContent>{countryName}</TooltipContent>
     </Tooltip>

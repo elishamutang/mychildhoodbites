@@ -38,7 +38,7 @@ export default async function Card({ product }: { product: Product }) {
           height={600}
           alt="Snack"
           loading="lazy"
-          className="border-b  rounded-t-md w-full h-full aspect-square"
+          className="border-b rounded-t-md w-full h-full aspect-square"
         />
       </div>
 
@@ -50,8 +50,12 @@ export default async function Card({ product }: { product: Product }) {
 
             {/* Flag */}
             <Flag
-              flag={product.Country.flag}
+              width={35}
+              height={35}
+              src={product.Country.flag}
+              alt={`${product.Country.name} flag`}
               countryName={product.Country.name}
+              className="drop-shadow-xl/20"
             />
           </div>
           <p className="text-zinc-500 h-[50px] mb-2 text-wrap overflow-hidden line-clamp-2">
