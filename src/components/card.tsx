@@ -1,7 +1,7 @@
 import { BlurFade } from "./magicui/blur-fade";
 import Link from "next/link";
 import Image from "next/image";
-import AisKrim from "../../public/images/products/high-res-ais-krim.png";
+import AisKrim from "../../public/images/products/ais-krim.png";
 import { Country, Category } from "../../generated/prisma";
 import Flag from "./flag";
 import getProductImg from "@/lib/getProductImg";
