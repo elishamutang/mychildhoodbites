@@ -31,13 +31,13 @@ export default function Nav() {
       <BlurFade delay={0.25 * 2} inView className="mx-2 hidden md:flex gap-5">
         <Link
           href="/products"
-          className="text-lg font-inter font-bold border py-1 px-2 rounded-lg text-blue-600"
+          className="hover:text-white hover:bg-blue-600 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-lg text-blue-600"
         >
           Bites
         </Link>
         <Link
           href="/categories"
-          className="text-lg font-inter font-bold border py-1 px-2 rounded-lg text-green-600"
+          className="hover:text-white hover:bg-green-600 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-lg text-green-600"
         >
           Categories
         </Link>
