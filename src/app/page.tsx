@@ -5,7 +5,10 @@ import { Globe } from "@/components/magicui/globe";
 export default function Home() {
   return (
     <section className="h-screen flex flex-col items-center justify-start text-3xl p-5 border rounded-lg w-full text-center">
-      <Heading delay={0.25 * 3}>Around the World in Childhood Bites.</Heading>
+      <Heading delay={0.25 * 3}>
+        Around the World in <span className="text-blue-600">Childhood</span>
+        <span className="text-green-600">Bites.</span>
+      </Heading>
 
       <BlurFade delay={0.25 * 3} inView className="md:max-w-[50%] mt-5">
         <h2 className="md:text-[22px] sm:text-xl xl:text-xl lg:text-[16px] text-start md:text-center text-sm text-zinc-400 font-inter">
