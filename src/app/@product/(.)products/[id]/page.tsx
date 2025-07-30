@@ -51,19 +51,19 @@ export default async function Page({
                 alt={product.name}
               />
             )}
-            <h2 className="text-lg font-semibold">Description</h2>
+            <h2 className="text-lg font-semibold text-start">Description</h2>
             <DialogDescription className="text-start">
               {product.description}
             </DialogDescription>
 
-            <h2 className="text-lg font-semibold">Lore</h2>
+            <h2 className="text-lg font-semibold text-start">Lore</h2>
             <DialogDescription className="text-start">
               {product.lore}
             </DialogDescription>
           </DialogHeader>
           <DialogFooter>
             <Link
-              className="text-sm border border-zinc-300 px-2 rounded-sm hover:font-semibold hover:text-white hover:bg-green-700 transition duration-200"
+              className="text-sm border text-center py-1 border-zinc-300 px-2 rounded-sm hover:font-semibold hover:text-white hover:bg-green-700 transition duration-200"
               href={`/products/${id}`}
               target="_blank"
             >
