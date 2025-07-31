@@ -2,4 +2,4 @@
 
 Take a trip down memory lane.
 
-![landing page](image.png)
+![landing page](public/images/landing-page.png)
