@@ -1,6 +1,7 @@
 import Heading from "@/components/heading";
 import { prisma } from "@/lib/prisma";
 import Card from "@/components/card";
+import Search from "@/components/search";
 
 export default async function Page() {
   const products = await prisma.product.findMany({
@@ -12,10 +13,15 @@ export default async function Page() {
 
   return (
     <section className="flex flex-col items-center md:border rounded-lg">
-      <Heading delay={0.25} className="text-blue-600">
-        Bites<span className="text-green-600">.</span>
+      <Heading delay={0.25} className="text-blue-600 text-6xl mt-2">
+        Bites
+        <span className="text-green-600">.</span>
       </Heading>
-      <section className="p-4 w-full justify-start flex flex-col gap-3 md:grid grid-rows-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
+
+      {/* Search bar */}
+      <Search />
+
+      <section className="md:p-4 w-full justify-start flex flex-col gap-3 md:grid grid-rows-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-3">
         {products.map((product) => {
           return <Card product={product} key={product.id} />;
         })}
