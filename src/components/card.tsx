@@ -2,26 +2,16 @@ import { BlurFade } from "./magicui/blur-fade";
 import Link from "next/link";
 import Image from "next/image";
 import AisKrim from "../../public/images/products/ais-krim.png";
-import { Country, Category } from "../../generated/prisma";
+import { Country, Category, Product } from "../../generated/prisma";
 import Flag from "./flag";
 import getProductImg from "@/lib/getProductImg";
 
-type Product = {
-  id: number;
-  name: string;
-  description?: string | null;
-  lore?: string | null;
-  image?: string | null;
-  whereToBuy?: string | null;
-  countryId: number;
+interface CompleteProduct extends Product {
   Country: Country;
-  categoryId: number;
   Category: Category;
-  createdAt: Date;
-  updatedAt: Date;
-};
+}
 
-export default async function Card({ product }: { product: Product }) {
+export default async function Card({ product }: { product: CompleteProduct }) {
   const imgSrc = await getProductImg(product.name);
 
   return (
