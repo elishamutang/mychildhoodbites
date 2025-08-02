@@ -1,34 +1,34 @@
 "use client";
 
-import { getProduct } from "@/actions/actions";
 import { BlurFade } from "./magicui/blur-fade";
-import { useActionState } from "react";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useDebouncedCallback } from "@mantine/hooks";
 
 export default function Search() {
-  const [state, action, pending] = useActionState(getProduct, "");
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // useDebouncedCallback to prevent querying DB on each keystroke.
+  const handleSearch = useDebouncedCallback((name: string): void => {
+    const params = new URLSearchParams(searchParams);
+
+    name ? params.set("name", name) : params.delete("name");
+    router.replace(`${pathname}?${params.toString()}`);
+  }, 500);
 
   return (
-    <BlurFade inView delay={0.25 * 2} className="w-full md:w-max">
-      <form
-        action={action}
-        className="font-inter my-5 border flex p-2 gap-2 border-zinc-300 rounded-sm"
-      >
-        <label htmlFor="product"></label>
+    <BlurFade inView delay={0.25 * 2} className="w-full md:w-xs lg:w-md">
+      <section className="my-10">
         <input
+          defaultValue={searchParams.get("name")?.toString()}
           name="product"
           type="text"
-          className="px-1 py-1 focus:outline-hidden border-b-2 border-b border-b-zinc-300 focus:border-blue-600"
-          placeholder="Food goes here..."
+          className="w-full px-1 py-1 focus:outline-hidden border-b-2 border-b border-b-zinc-300 focus:border-blue-600"
+          placeholder="Start discovering food here..."
+          onChange={(e) => handleSearch(e.target.value)}
         />
-        <button
-          disabled={pending}
-          type="submit"
-          style={{ fontWeight: "bold" }}
-          className="border disabled:opacity-50 disabled:cursor-not-allowed bg-blue-600 text-white px-2 rounded-sm hover:cursor-pointer hover:bg-green-600 hover:font-bold transition duration-200"
-        >
-          Search
-        </button>
-      </form>
+      </section>
     </BlurFade>
   );
 }
