@@ -1,12 +1,6 @@
 import { PrismaClient, Product } from "../generated/prisma";
-import path from "path";
 
 const prisma = new PrismaClient()
-
-const getImgPath = (name: string) => {
-    const fileName = name.replace(/ /g, "-")
-    return path.resolve('/', 'public', 'products', fileName)
-}
 
 const productData = [
     {
@@ -14,7 +8,6 @@ const productData = [
         "categoryId": 4,
         "countryId": 32,
         "description": "Traditional Singaporean breakfast featuring crispy toast spread with kaya (coconut jam) and butter, served with soft-boiled eggs and a dash of soy sauce and pepper.",
-        "image": getImgPath("Kaya Toast with Soft-Boiled Eggs"),
         "lore": "Born in colonial-era kopitiams, this comfort breakfast became an early-morning ritual for generations. Elders say the fragrance of kaya welcomes fortune, and cracking soft-boiled eggs together at the table is a sign of shared luck and prosperity."
     },
     {
@@ -22,7 +15,6 @@ const productData = [
         "categoryId": 10,
         "countryId": 32,
         "description": "Popular iced chocolate malt drink topped with a generous heap of Milo powder, known for its rich, sweet, and malty flavor.",
-        "image": getImgPath("Milo Dinosaur"),
         "lore": "Legend claims a playful schoolchild once upended half a tin of Milo atop his drink, forever changing the local beverage scene. Milo Dinosaur became the symbol of youthful mischief – and ordering one is said to bring back carefree childhood joys."
     },
     {
