@@ -1,136 +1,233 @@
-import { PrismaClient, Product } from "../generated/prisma";
+import { PrismaClient } from "../generated/prisma";
 
 const prisma = new PrismaClient()
 
 const productData = [
     {
-        "name": "Ais Krim",
-        "countryId": 3,
-        "categoryId": 6,
-        "description": "Traditional Malaysian ice cream, often served in plastic tubes or bags in a variety of flavors.",
-        "lore": "Once churned by street vendors under the sun’s relentless gaze, Ais Krim became a much-needed oasis of cool delight. Locals say each icy bite carries the laughter of children chasing afternoon shadows and the magic of simple joy in a plastic bag."
+        name: "Ais Krim",
+        subregionId: 3,
+        categoryId: 6,
+        description: "A beloved Southeast Asian ice cream, typically served in a tube or plastic bag and enjoyed across many tropical countries in vibrant flavors.",
+        lore: "Once a street-side remedy for sweltering afternoons, Ais Krim is a fusion of regional flavors and carefree moments, uniting generations who still savor sweet, icy relief beneath sun-dappled canopies.",
+        countries: {
+            create: [
+                { country: { connect: { id: 3 } } },    // Malaysia
+                { country: { connect: { id: 31 } } },   // Singapore
+                { country: { connect: { id: 174 } } },  // Indonesia
+                { country: { connect: { id: 61 } } }    // Thailand
+            ]
+        }
     },
     {
-        "name": "White Rabbit Candy",
-        "countryId": 3,
-        "categoryId": 7,
-        "description": "Classic milk-flavored chewy candy from Asia, wrapped in edible rice paper and popular in Malaysia.",
-        "lore": "Legend has it the White Rabbit hopped right out of childhood dreams, gifting a candy wrapped in a delicate veil that melts away like sweet innocence itself. To bite into this treat is to invite nostalgia to dance on your tongue."
+        name: "White Rabbit Candy",
+        subregionId: 22,
+        categoryId: 7,
+        description: "A creamy, milk-flavored chewy candy from China, famous for its edible rice paper wrap and nostalgic taste across Asia.",
+        lore: "The White Rabbit hops beyond borders, wrapping fond childhood dreams in a delicate rice paper hug—its gentle sweetness bridging distant lands, one bite at a time.",
+        countries: {
+            create: [
+                { country: { connect: { id: 188 } } },  // China
+                { country: { connect: { id: 3 } } },    // Malaysia
+                { country: { connect: { id: 31 } } },   // Singapore
+                { country: { connect: { id: 38 } } }    // Hong Kong
+            ]
+        }
     },
     {
-        "name": "Apollo Layer Cake",
-        "countryId": 3,
-        "categoryId": 8,
-        "description": "Soft and fluffy snack cake featuring colorful layers, widely enjoyed by children in Malaysia.",
-        "lore": "Popular in school canteens and birthday parties, the Apollo Layer Cake is said to hold the colors of childhood happiness. Each pastel slice is a slice of celebration, sparking friendship and shared secrets with every bite."
+        name: "Apollo Layer Cake",
+        subregionId: 3,
+        categoryId: 8,
+        description: "A soft, multi-layered snack cake with colorful stripes, celebrated in school lunchboxes and tea breaks throughout Southeast Asia.",
+        lore: "Best shared at birthday tables and playground benches, Apollo Layer Cake is more than a dessert—it's a tapestry of laughter and fond memories in every pastel slice.",
+        countries: {
+            create: [
+                { country: { connect: { id: 3 } } },    // Malaysia
+                { country: { connect: { id: 31 } } },   // Singapore
+                { country: { connect: { id: 174 } } }   // Indonesia
+            ]
+        }
     },
     {
-        "name": "Mamee Monster",
-        "countryId": 3,
-        "categoryId": 2,
-        "description": "Crunchy instant noodle snack, usually eaten straight from the pack, seasoned with savory flavors.",
-        "lore": "Rumored to have been created by mischievous snack spirits, Mamee Monster’s crunchy roar awakens the playful soul. Many swear it turns ordinary breaks into fun-filled adventures, packed right in your lunchbox."
+        name: "Mamee Monster",
+        subregionId: 3,
+        categoryId: 2,
+        description: "A crunchy, savory instant noodle snack eaten straight from the pack, Mamee Monster’s roar is well-known across lunchboxes in the region.",
+        lore: "A legend at recess, Mamee Monster is said to awaken the kid in everyone—its bold crunch a playful anthem for impromptu fun and snack-time adventures with friends.",
+        countries: {
+            create: [
+                { country: { connect: { id: 3 } } },    // Malaysia
+                { country: { connect: { id: 31 } } },   // Singapore
+                { country: { connect: { id: 61 } } },   // Thailand
+                { country: { connect: { id: 174 } } },  // Indonesia
+                { country: { connect: { id: 170 } } }   // Philippines
+            ]
+        }
     },
     {
-        "name": "Kuih Bahulu",
-        "countryId": 3,
-        "categoryId": 9,
-        "description": "Light and airy sponge cakes, shaped in unique molds, commonly served during festive occasions.",
-        "lore": "Shaped lovingly in traditional molds, Kuih Bahulu is said to be a little golden messenger of prosperity. Passed down through generations, it carries wishes for sweetness in life’s celebrations and the warmth of family gatherings."
+        name: "Kuih Bahulu",
+        subregionId: 3,
+        categoryId: 9,
+        description: "Light, fluffy sponge cakes, shaped in ornate molds—these golden treats are festive favorites at gatherings throughout Malaysia, Singapore, Indonesia, and Brunei.",
+        lore: "Each bite of Kuih Bahulu whispers traditions and festive warmth, carrying generations’ wishes for sweetness, prosperity, and joyful reunion.",
+        countries: {
+            create: [
+                { country: { connect: { id: 3 } } },    // Malaysia
+                { country: { connect: { id: 31 } } },   // Singapore
+                { country: { connect: { id: 174 } } },  // Indonesia
+                { country: { connect: { id: 140 } } }   // Brunei
+            ]
+        }
     },
     {
-        "name": "Kuih Talam",
-        "countryId": 3,
-        "categoryId": 9,
-        "description": "Steamed layered dessert made from coconut milk and pandan, offering a soft, jelly-like texture.",
-        "lore": "With its gentle green pandan layer atop creamy coconut, Kuih Talam is whispered to bring harmony and peace. Served at weddings and festivals, it symbolizes layered blessings and the promise of unity."
+        name: "Kuih Talam",
+        subregionId: 3,
+        categoryId: 9,
+        description: "A gently steamed, two-toned dessert featuring creamy coconut and elegant pandan layers, echoing harmony in every bite.",
+        lore: "Kuih Talam’s layered form symbolizes unity—served at celebratory gatherings, it promises blessings and togetherness to all who partake.",
+        countries: {
+            create: [
+                { country: { connect: { id: 3 } } },
+                { country: { connect: { id: 31 } } },
+                { country: { connect: { id: 174 } } }
+            ]
+        }
     },
     {
-        "name": "Ting Ting Candy",
-        "countryId": 3,
-        "categoryId": 7,
-        "description": "Hard, sweet malt-flavored candy, often individually wrapped, a nostalgic treat for many Malaysians.",
-        "lore": "Once a staple in village shops, the tinkling sound of Ting Ting candy wrappers is said to call back memories of childhood summers and secret treasures. Holding one is like holding a tiny crystal of sweet nostalgia."
+        name: "Ting Ting Candy",
+        subregionId: 22,
+        categoryId: 7,
+        description: "A classic hard malt candy, often individually wrapped, that evokes nostalgia in communities from China to Malaysia and Singapore.",
+        lore: "The faint ‘ting ting’ of these candies in village shops summons memories of pocket money treats and summer adventures, cherished across generations and borders.",
+        countries: {
+            create: [
+                { country: { connect: { id: 188 } } },
+                { country: { connect: { id: 3 } } },
+                { country: { connect: { id: 31 } } },
+                { country: { connect: { id: 197 } } }
+            ]
+        }
     },
     {
-        "name": "Kacang Putih",
-        "countryId": 3,
-        "categoryId": 8,
-        "description": "Selection of savory spiced nuts and legumes, sold as a popular street snack.",
-        "lore": "Stall owners claim each handful of Kacang Putih carries the secrets of age-old spice recipes. Enjoyed on bustling streets and quiet corners alike, these savory bites are thought to bring harmony to busy days and warmth to social chats."
+        name: "Kacang Putih",
+        subregionId: 19,
+        categoryId: 8,
+        description: "A mix of spiced nuts and legumes, Kacang Putih brings Indian-inspired crunch and flavor to street corners and gatherings throughout South and Southeast Asia.",
+        lore: "Born of bustling bazaars, Kacang Putih’s every handful is a spicy tapestry—its aroma and taste a reminder of cross-cultural mingling and vibrant street life.",
+        countries: {
+            create: [
+                { country: { connect: { id: 156 } } },
+                { country: { connect: { id: 3 } } },
+                { country: { connect: { id: 31 } } },
+                { country: { connect: { id: 121 } } }
+            ]
+        }
     },
     {
-        "name": "Marble Cake",
-        "countryId": 3,
-        "categoryId": 5,
-        "description": "Soft butter cake swirled with chocolate and vanilla batters, creating a marbled effect.",
-        "lore": "Legend says the Marble Cake was a dessert of artists – home bakers mixing their sweetest dreams into every swirl. Each slice is a canvas, blending light and dark into a perfect dance of flavors."
+        name: "Marble Cake",
+        subregionId: 8,
+        categoryId: 5,
+        description: "A tender butter cake marbled with chocolate and vanilla, adopted widely from Europe to Asia and beloved at tea time.",
+        lore: "Marble Cake is the edible art of generations—its swirling patterns invite creativity, turning kitchens worldwide into studios for sweet masterpieces.",
+        countries: {
+            create: [
+                { country: { connect: { id: 10 } } },
+                { country: { connect: { id: 157 } } },
+                { country: { connect: { id: 3 } } },
+                { country: { connect: { id: 31 } } },
+                { country: { connect: { id: 41 } } }
+            ]
+        }
     },
     {
-        "name": "ABC",
-        "countryId": 3,
-        "categoryId": 10,
-        "description": "\"Air Batu Campur\" or shaved ice dessert with sweet syrups, beans, jellies, and corn, a Malaysian favorite for cooling down.",
-        "lore": "A veteran of Malaysia’s tropical heat, ABC is whispered to be the drink of festivarians and midnight wanderers. The rainbow of toppings symbolize life’s many flavors, coming together in chilled harmony under the sun."
+        name: "ABC",
+        subregionId: 3,
+        categoryId: 10,
+        description: "Known as Air Batu Campur, this shaved ice treat comes loaded with sweet syrups, jellies, beans, and corn—cooling Southeast Asia’s steamy afternoons.",
+        lore: "A canvas of tropical flavors, ABC is said to have fueled festive midnight wanderings and sun-soaked friendships—a bowl where every topping tells a different story.",
+        countries: {
+            create: [
+                { country: { connect: { id: 3 } } },
+                { country: { connect: { id: 31 } } },
+                { country: { connect: { id: 174 } } }
+            ]
+        }
     },
     {
-        "name": "Jagung Cup",
-        "countryId": 3,
-        "categoryId": 2,
-        "description": "Sweet corn served in a cup, usually topped with creamy margarine and sugar or cheese powder.",
-        "lore": "From humble fields to bustling streets, the Jagung Cup is said to capture summer’s golden warmth in every bite. Topped with creamy dreams, it’s a mug of sunshine shared between friends and family in rain or shine."
+        name: "Jagung Cup",
+        subregionId: 17,
+        categoryId: 2,
+        description: "Sweet corn served in a cup, often topped with margarine and sugar or cheese powder—a street food that blends New World crop with Asian flair.",
+        lore: "Harvested from distant fields, the humble Jagung Cup found new life as a mug of gold—its warm sweetness and creamy toppings are shared by friends, rain or shine.",
+        countries: {
+            create: [
+                { country: { connect: { id: 3 } } },
+                { country: { connect: { id: 31 } } },
+                { country: { connect: { id: 174 } } },
+                { country: { connect: { id: 66 } } },
+                { country: { connect: { id: 170 } } }
+            ]
+        }
     },
     {
-        "name": "Kek Cawan",
-        "countryId": 3,
-        "categoryId": 5,
-        "description": "Malaysian term for cupcakes, small sponge cakes often decorated with colorful icing.",
-        "lore": "Kek Cawan are the tiny celebration ambassadors at every gathering. Legend says their vibrant icing holds wishes for happiness and cheer, carried on the fingertips of eager hands and joyful hearts."
+        name: "Kek Cawan",
+        subregionId: 9,
+        categoryId: 5,
+        description: "The Asian take on classic cupcakes: light sponge cakes topped with colorful icing, spreading joy from Western birthdays to Southeast Asian gatherings.",
+        lore: "Kek Cawan are tiny messengers of happiness—each is decorated with cheerful colors and shared stories, making every celebration a little brighter.",
+        countries: {
+            create: [
+                { country: { connect: { id: 157 } } },
+                { country: { connect: { id: 41 } } },
+                { country: { connect: { id: 3 } } },
+                { country: { connect: { id: 31 } } }
+            ]
+        }
     },
     {
-        "name": "Kuih Kapit",
-        "countryId": 3,
-        "categoryId": 2,
-        "description": "Crispy folded wafers, also known as \"love letters,\" made from coconut milk and eggs, traditional during celebrations.",
-        "lore": "Also called \"love letters,\" Kuih Kapit carries old tales of secret messages and sweet promises. Crisply folded and golden, each bite is said to unfold warmth and affection passed down through generations."
+        name: "Kuih Kapit",
+        subregionId: 3,
+        categoryId: 2,
+        description: "Crispy coconut and egg wafers, folded into delicate shapes and exchanged at festive seasons throughout Southeast Asia.",
+        lore: "Kuih Kapit, or ‘love letters’, hold within their folds sweet messages and family stories, each crunchy bite a tribute to shared heritage and affection.",
+        countries: {
+            create: [
+                { country: { connect: { id: 3 } } },
+                { country: { connect: { id: 31 } } },
+                { country: { connect: { id: 174 } } },
+                { country: { connect: { id: 188 } } }
+            ]
+        }
     }
-]
-
-const existingData: Product[] = []
+];
 
 export default async function main() {
-
-    // Check if product exists
     for (const product of productData) {
-        const p = await prisma.product.findUnique({
-            where: {
-                name: product['name']
-            }
+        const existingProduct = await prisma.product.findUnique({
+            where: { name: product.name }
         })
 
-        if (p) {
-            existingData.push(p)
+        if (existingProduct) {
+            const { countries, ...rest } = product
+
+            await prisma.productsOnCountries.deleteMany({
+                where: { productId: existingProduct.id }
+            })
+
+            await prisma.product.update({
+                where: { id: existingProduct.id },
+                data: {
+                    ...rest,
+                    countries: {
+                        create: countries.create
+                    }
+                }
+            })
+        } else {
+            await prisma.product.create({
+                data: product
+            })
         }
     }
-
-    if (existingData.length === 0) {
-        // Seed product
-        await prisma.product.createMany({ data: productData })
-    } else {
-        // Update product
-        for (const data of existingData) {
-            const updatedProduct = productData.find(d => d.name === data.name)
-
-            if (updatedProduct) {
-                await prisma.product.update({
-                    where: { name: updatedProduct['name'] },
-                    data: updatedProduct
-                })
-            }
-        }
-    }
-
-
 }
 
 main()
