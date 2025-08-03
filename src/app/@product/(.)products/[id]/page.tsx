@@ -20,10 +20,6 @@ export default async function Page({
   const id = parseInt((await params).id);
   const product = await prisma.product.findUnique({
     where: { id: id },
-    include: {
-      Country: true,
-      Category: true,
-    },
   });
 
   if (!product) {
