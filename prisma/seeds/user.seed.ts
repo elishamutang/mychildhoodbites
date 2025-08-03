@@ -6,9 +6,11 @@ const randNum = (min: number, max: number) => {
 }
 
 export default async function main(prisma: PrismaClient) {
-
     // Check whether users table has existing data.
     const existingData = await prisma.user.findMany()
+
+    // Check number of countries
+    const lengthOfCountries = (await prisma.country.findMany()).length
 
     if (existingData.length === 0) {
         // Seed users
@@ -18,7 +20,7 @@ export default async function main(prisma: PrismaClient) {
                     email: randEmail(),
                     name: randFirstName(),
                     password: 'Password1',
-                    countryId: randNum(1, 250),
+                    countryId: randNum(1, lengthOfCountries),
                 }
             })
         }
