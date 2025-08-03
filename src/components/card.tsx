@@ -2,12 +2,11 @@ import { BlurFade } from "./magicui/blur-fade";
 import Link from "next/link";
 import Image from "next/image";
 import AisKrim from "../../public/images/products/ais-krim.png";
-import { Country, Category, Product } from "../../generated/prisma";
-import Flag from "./flag";
+import { Category, Product, SubRegion } from "../../generated/prisma";
 import getProductImg from "@/lib/getProductImg";
 
 interface CompleteProduct extends Product {
-  Country: Country;
+  SubRegion: SubRegion;
   Category: Category;
 }
 
@@ -38,15 +37,8 @@ export default async function Card({ product }: { product: CompleteProduct }) {
           <div className="flex justify-between gap-2 w-full">
             <h1 className="font-extrabold truncate">{product.name}</h1>
 
-            {/* Flag */}
-            <Flag
-              width={35}
-              height={35}
-              src={product.Country.flag}
-              alt={`${product.Country.name} flag`}
-              countryName={product.Country.name}
-              className="drop-shadow-xl/20"
-            />
+            {/* Sub Region */}
+            <p>{product.SubRegion.name}</p>
           </div>
           <p className="text-zinc-500 h-[50px] mb-2 text-wrap overflow-hidden line-clamp-2">
             {product.description}
