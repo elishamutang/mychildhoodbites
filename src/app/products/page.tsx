@@ -3,11 +3,11 @@ import { prisma } from "@/lib/prisma";
 import Card from "@/components/card";
 import Search from "@/components/search";
 import { Suspense } from "react";
-import { Product, Country, Category } from "../../../generated/prisma";
+import { Product, Category, SubRegion } from "../../../generated/prisma";
 import Loading from "@/components/loading";
 
 interface CompleteProduct extends Product {
-  Country: Country;
+  SubRegion: SubRegion;
   Category: Category;
 }
 
@@ -19,7 +19,7 @@ export default async function Page({
   // By default, all products are loaded.
   let products: CompleteProduct[] = await prisma.product.findMany({
     include: {
-      Country: true,
+      SubRegion: true,
       Category: true,
     },
   });
@@ -34,7 +34,7 @@ export default async function Page({
         },
       },
       include: {
-        Country: true,
+        SubRegion: true,
         Category: true,
       },
     });

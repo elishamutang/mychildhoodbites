@@ -14,9 +14,15 @@ export default async function Page({
   const product = await prisma.product.findUnique({
     where: { id: id },
     include: {
-      Country: true,
+      SubRegion: true,
       Category: true,
     },
+  });
+
+  // Get countries
+  const productOnCountries = await prisma.productsOnCountries.findMany({
+    where: { productId: product?.id },
+    include: { country: true },
   });
 
   if (!product) {
@@ -36,15 +42,8 @@ export default async function Page({
           <span className="text-green-600">.</span>
         </h1>
 
-        <Flag
-          tooltipWidth="w-[40px]"
-          src={product.Country.flag}
-          width={40}
-          height={40}
-          alt={`${product.Country.name} flag`}
-          countryName={product.Country.name}
-          className="drop-shadow-xl/20 mb-2"
-        />
+        {/* Sub Region */}
+        <p>{product.SubRegion.name}</p>
 
         {/* Category */}
         <section className="border w-max px-2 py-1 rounded-sm bg-blue-600 font-semibold text-white text-xs">
@@ -64,7 +63,7 @@ export default async function Page({
       </section>
 
       {/* Right */}
-      <section className="flex-3 flex flex-col gap-3 px-8 md:border-l">
+      <section className="flex-3 flex flex-col gap-3 md:px-8 md:border-l">
         {/* Brief Description */}
         <section className="flex flex-col gap-2">
           <h2 className="text-3xl lg:text-4xl font-bold">Description</h2>
@@ -75,6 +74,31 @@ export default async function Page({
         <section className="flex flex-col gap-2">
           <h2 className="text-3xl lg:text-4xl font-bold">Lore</h2>
           <p className="text-zinc-500">{product.lore}</p>
+        </section>
+
+        {/* Enjoyed in these countries */}
+        <section className="flex flex-col gap-3">
+          <h2 className="text-3xl lg:text-4xl font-bold">
+            Mostly enjoyed in these countries
+          </h2>
+          <div className="border flex flex-wrap items-start gap-3">
+            {productOnCountries.map((product) => (
+              <Flag
+                src={product.country.flag}
+                alt={product.country.name}
+                countryName={product.country.name}
+                className="drop-shadow-xl/30 mb-2 w-[45px] md:w-[80px]"
+                width={80}
+                height={80}
+                key={product.countryId}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* Similar variants */}
+        <section className="flex flex-col gap-3">
+          <h2 className="text-3xl lg:text-4xl font-bold">Similar Variants</h2>
         </section>
       </section>
     </section>
