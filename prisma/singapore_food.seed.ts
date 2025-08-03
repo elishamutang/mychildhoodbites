@@ -42,8 +42,8 @@ const productData = [
                 { country: { connect: { id: 31 } } }, // Singapore
                 { country: { connect: { id: 3 } } },  // Malaysia
                 { country: { connect: { id: 174 } } },// Indonesia
-                { country: { connect: { id: 156 } } },// China
-                { country: { connect: { id: 189 } } } // Thailand
+                { country: { connect: { id: 188 } } },// China
+                { country: { connect: { id: 61 } } } // Thailand
             ]
         }
     },
@@ -86,7 +86,7 @@ const productData = [
                 { country: { connect: { id: 174 } } }, // Indonesia
                 { country: { connect: { id: 140 } } }, // Brunei
                 { country: { connect: { id: 197 } } }, // Vietnam
-                { country: { connect: { id: 189 } } }  // Thailand
+                { country: { connect: { id: 61 } } }  // Thailand
             ]
         }
     },
