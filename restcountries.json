@@ -18,6 +18,7 @@
     "cca3": "MDA",
     "capital": ["Chișinău"],
     "region": "Europe",
+    "subregion": "Eastern Europe",
     "borders": ["ROU", "UKR"]
   },
   {
@@ -47,6 +48,7 @@
     "cca3": "COM",
     "capital": ["Moroni"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": []
   },
   {
@@ -72,6 +74,7 @@
     "cca3": "MYS",
     "capital": ["Kuala Lumpur"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["BRN", "IDN", "THA"]
   },
   {
@@ -93,6 +96,7 @@
     "cca3": "DZA",
     "capital": ["Algiers"],
     "region": "Africa",
+    "subregion": "Northern Africa",
     "borders": ["TUN", "LBY", "NER", "ESH", "MRT", "MLI", "MAR"]
   },
   {
@@ -118,6 +122,7 @@
     "cca3": "NFK",
     "capital": ["Kingston"],
     "region": "Oceania",
+    "subregion": "Australia and New Zealand",
     "borders": []
   },
   {
@@ -139,6 +144,7 @@
     "cca3": "SVN",
     "capital": ["Ljubljana"],
     "region": "Europe",
+    "subregion": "Central Europe",
     "borders": ["AUT", "HRV", "ITA", "HUN"]
   },
   {
@@ -160,6 +166,7 @@
     "cca3": "GUY",
     "capital": ["Georgetown"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["BRA", "SUR", "VEN"]
   },
   {
@@ -181,6 +188,7 @@
     "cca3": "SGS",
     "capital": ["King Edward Point"],
     "region": "Antarctic",
+    "subregion": "",
     "borders": []
   },
   {
@@ -202,6 +210,7 @@
     "cca3": "CXR",
     "capital": ["Flying Fish Cove"],
     "region": "Oceania",
+    "subregion": "Australia and New Zealand",
     "borders": []
   },
   {
@@ -223,6 +232,7 @@
     "cca3": "FRA",
     "capital": ["Paris"],
     "region": "Europe",
+    "subregion": "Western Europe",
     "borders": ["AND", "BEL", "DEU", "ITA", "LUX", "MCO", "ESP", "CHE"]
   },
   {
@@ -244,6 +254,7 @@
     "cca3": "DNK",
     "capital": ["Copenhagen"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["DEU"]
   },
   {
@@ -269,6 +280,7 @@
     "cca3": "KAZ",
     "capital": ["Astana"],
     "region": "Asia",
+    "subregion": "Central Asia",
     "borders": ["CHN", "KGZ", "RUS", "TKM", "UZB"]
   },
   {
@@ -298,6 +310,7 @@
     "cca3": "VUT",
     "capital": ["Port Vila"],
     "region": "Oceania",
+    "subregion": "Melanesia",
     "borders": []
   },
   {
@@ -319,6 +332,7 @@
     "cca3": "UKR",
     "capital": ["Kyiv"],
     "region": "Europe",
+    "subregion": "Eastern Europe",
     "borders": ["BLR", "HUN", "MDA", "POL", "ROU", "RUS", "SVK"]
   },
   {
@@ -340,6 +354,7 @@
     "cca3": "LIE",
     "capital": ["Vaduz"],
     "region": "Europe",
+    "subregion": "Western Europe",
     "borders": ["AUT", "CHE"]
   },
   {
@@ -361,6 +376,7 @@
     "cca3": "AUT",
     "capital": ["Vienna"],
     "region": "Europe",
+    "subregion": "Central Europe",
     "borders": ["CZE", "DEU", "HUN", "ITA", "LIE", "SVK", "SVN", "CHE"]
   },
   {
@@ -382,6 +398,7 @@
     "cca3": "KWT",
     "capital": ["Kuwait City"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["IRQ", "SAU"]
   },
   {
@@ -403,6 +420,7 @@
     "cca3": "AND",
     "capital": ["Andorra la Vella"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": ["FRA", "ESP"]
   },
   {
@@ -428,6 +446,7 @@
     "cca3": "BWA",
     "capital": ["Gaborone"],
     "region": "Africa",
+    "subregion": "Southern Africa",
     "borders": ["NAM", "ZAF", "ZMB", "ZWE"]
   },
   {
@@ -453,6 +472,7 @@
     "cca3": "FRO",
     "capital": ["Tórshavn"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": []
   },
   {
@@ -474,6 +494,7 @@
     "cca3": "ARE",
     "capital": ["Abu Dhabi"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["OMN", "SAU"]
   },
   {
@@ -499,6 +520,7 @@
     "cca3": "CMR",
     "capital": ["Yaoundé"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["CAF", "TCD", "COG", "GNQ", "GAB", "NGA"]
   },
   {
@@ -520,6 +542,7 @@
     "cca3": "RUS",
     "capital": ["Moscow"],
     "region": "Europe",
+    "subregion": "Eastern Europe",
     "borders": [
       "AZE",
       "BLR",
@@ -560,6 +583,7 @@
     "cca3": "JAM",
     "capital": ["Kingston"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -581,6 +605,7 @@
     "cca3": "PSE",
     "capital": ["Ramallah", "Jerusalem"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["ISR", "EGY", "JOR"]
   },
   {
@@ -606,6 +631,7 @@
     "cca3": "DJI",
     "capital": ["Djibouti"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["ERI", "ETH", "SOM"]
   },
   {
@@ -631,6 +657,7 @@
     "cca3": "KEN",
     "capital": ["Nairobi"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["ETH", "SOM", "SSD", "TZA", "UGA"]
   },
   {
@@ -660,6 +687,7 @@
     "cca3": "BLZ",
     "capital": ["Belmopan"],
     "region": "Americas",
+    "subregion": "Central America",
     "borders": ["GTM", "MEX"]
   },
   {
@@ -681,6 +709,7 @@
     "cca3": "PYF",
     "capital": ["Papeetē"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -702,6 +731,7 @@
     "cca3": "MMR",
     "capital": ["Naypyidaw"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["BGD", "CHN", "IND", "LAO", "THA"]
   },
   {
@@ -723,6 +753,7 @@
     "cca3": "GIB",
     "capital": ["Gibraltar"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": ["ESP"]
   },
   {
@@ -756,6 +787,7 @@
     "cca3": "SGP",
     "capital": ["Singapore"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": []
   },
   {
@@ -777,6 +809,7 @@
     "cca3": "SVK",
     "capital": ["Bratislava"],
     "region": "Europe",
+    "subregion": "Central Europe",
     "borders": ["AUT", "CZE", "HUN", "POL", "UKR"]
   },
   {
@@ -798,6 +831,7 @@
     "cca3": "ISL",
     "capital": ["Reykjavik"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": []
   },
   {
@@ -819,6 +853,7 @@
     "cca3": "BTN",
     "capital": ["Thimphu"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": ["CHN", "IND"]
   },
   {
@@ -840,6 +875,7 @@
     "cca3": "MKD",
     "capital": ["Skopje"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["ALB", "BGR", "GRC", "UNK", "SRB"]
   },
   {
@@ -861,6 +897,7 @@
     "cca3": "VIR",
     "capital": ["Charlotte Amalie"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -882,6 +919,7 @@
     "cca3": "GIN",
     "capital": ["Conakry"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["CIV", "GNB", "LBR", "MLI", "SEN", "SLE"]
   },
   {
@@ -907,6 +945,7 @@
     "cca3": "HKG",
     "capital": ["City of Victoria"],
     "region": "Asia",
+    "subregion": "Eastern Asia",
     "borders": ["CHN"]
   },
   {
@@ -932,6 +971,7 @@
     "cca3": "MLT",
     "capital": ["Valletta"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": []
   },
   {
@@ -961,6 +1001,7 @@
     "cca3": "AFG",
     "capital": ["Kabul"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": ["IRN", "PAK", "TKM", "UZB", "TJK", "CHN"]
   },
   {
@@ -982,6 +1023,7 @@
     "cca3": "USA",
     "capital": ["Washington, D.C."],
     "region": "Americas",
+    "subregion": "North America",
     "borders": ["CAN", "MEX"]
   },
   {
@@ -1003,6 +1045,7 @@
     "cca3": "SUR",
     "capital": ["Paramaribo"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["BRA", "GUF", "GUY"]
   },
   {
@@ -1032,6 +1075,7 @@
     "cca3": "GGY",
     "capital": ["St. Peter Port"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": []
   },
   {
@@ -1061,6 +1105,7 @@
     "cca3": "CUW",
     "capital": ["Willemstad"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -1086,6 +1131,7 @@
     "cca3": "VAT",
     "capital": ["Vatican City"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": ["ITA"]
   },
   {
@@ -1115,6 +1161,7 @@
     "cca3": "PNG",
     "capital": ["Port Moresby"],
     "region": "Oceania",
+    "subregion": "Melanesia",
     "borders": ["IDN"]
   },
   {
@@ -1140,6 +1187,7 @@
     "cca3": "MWI",
     "capital": ["Lilongwe"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["MOZ", "TZA", "ZMB"]
   },
   {
@@ -1161,6 +1209,7 @@
     "cca3": "HUN",
     "capital": ["Budapest"],
     "region": "Europe",
+    "subregion": "Central Europe",
     "borders": ["AUT", "HRV", "ROU", "SRB", "SVK", "SVN", "UKR"]
   },
   {
@@ -1182,6 +1231,7 @@
     "cca3": "KHM",
     "capital": ["Phnom Penh"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["LAO", "THA", "VNM"]
   },
   {
@@ -1203,6 +1253,7 @@
     "cca3": "ECU",
     "capital": ["Quito"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["COL", "PER"]
   },
   {
@@ -1228,6 +1279,7 @@
     "cca3": "CAN",
     "capital": ["Ottawa"],
     "region": "Americas",
+    "subregion": "North America",
     "borders": ["USA"]
   },
   {
@@ -1257,6 +1309,7 @@
     "cca3": "NOR",
     "capital": ["Oslo"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["FIN", "SWE", "RUS"]
   },
   {
@@ -1278,6 +1331,7 @@
     "cca3": "CYM",
     "capital": ["George Town"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -1299,6 +1353,7 @@
     "cca3": "MTQ",
     "capital": ["Fort-de-France"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -1328,6 +1383,7 @@
     "cca3": "SXM",
     "capital": ["Philipsburg"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": ["MAF"]
   },
   {
@@ -1349,6 +1405,7 @@
     "cca3": "MLI",
     "capital": ["Bamako"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["DZA", "BFA", "GIN", "CIV", "MRT", "NER", "SEN"]
   },
   {
@@ -1374,6 +1431,7 @@
     "cca3": "WSM",
     "capital": ["Apia"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -1403,6 +1461,7 @@
     "cca3": "FJI",
     "capital": ["Suva"],
     "region": "Oceania",
+    "subregion": "Melanesia",
     "borders": []
   },
   {
@@ -1424,6 +1483,7 @@
     "cca3": "COL",
     "capital": ["Bogotá"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["BRA", "ECU", "PAN", "PER", "VEN"]
   },
   {
@@ -1445,6 +1505,7 @@
     "cca3": "CUB",
     "capital": ["Havana"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -1466,6 +1527,7 @@
     "cca3": "THA",
     "capital": ["Bangkok"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["MMR", "KHM", "LAO", "MYS"]
   },
   {
@@ -1487,6 +1549,7 @@
     "cca3": "MNG",
     "capital": ["Ulan Bator"],
     "region": "Asia",
+    "subregion": "Eastern Asia",
     "borders": ["CHN", "RUS"]
   },
   {
@@ -1508,6 +1571,7 @@
     "cca3": "REU",
     "capital": ["Saint-Denis"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": []
   },
   {
@@ -1533,6 +1597,7 @@
     "cca3": "GNB",
     "capital": ["Bissau"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["GIN", "SEN"]
   },
   {
@@ -1558,6 +1623,7 @@
     "cca3": "ARG",
     "capital": ["Buenos Aires"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["BOL", "BRA", "CHL", "PRY", "URY"]
   },
   {
@@ -1579,6 +1645,7 @@
     "cca3": "MEX",
     "capital": ["Mexico City"],
     "region": "Americas",
+    "subregion": "North America",
     "borders": ["BLZ", "GTM", "USA"]
   },
   {
@@ -1604,6 +1671,7 @@
     "cca3": "TKM",
     "capital": ["Ashgabat"],
     "region": "Asia",
+    "subregion": "Central Asia",
     "borders": ["AFG", "IRN", "KAZ", "UZB"]
   },
   {
@@ -1625,6 +1693,7 @@
     "cca3": "ATF",
     "capital": ["Port-aux-Français"],
     "region": "Antarctic",
+    "subregion": "",
     "borders": []
   },
   {
@@ -1646,6 +1715,7 @@
     "cca3": "ETH",
     "capital": ["Addis Ababa"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["DJI", "ERI", "KEN", "SOM", "SSD", "SDN"]
   },
   {
@@ -1667,6 +1737,7 @@
     "cca3": "GAB",
     "capital": ["Libreville"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["CMR", "COG", "GNQ"]
   },
   {
@@ -1688,6 +1759,7 @@
     "cca3": "KOR",
     "capital": ["Seoul"],
     "region": "Asia",
+    "subregion": "Eastern Asia",
     "borders": ["PRK"]
   },
   {
@@ -1709,6 +1781,7 @@
     "cca3": "TGO",
     "capital": ["Lomé"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["BEN", "BFA", "GHA"]
   },
   {
@@ -1730,6 +1803,7 @@
     "cca3": "GHA",
     "capital": ["Accra"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["BFA", "CIV", "TGO"]
   },
   {
@@ -1751,6 +1825,7 @@
     "cca3": "ZMB",
     "capital": ["Lusaka"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["AGO", "BWA", "COD", "MWI", "MOZ", "NAM", "TZA", "ZWE"]
   },
   {
@@ -1780,6 +1855,7 @@
     "cca3": "NZL",
     "capital": ["Wellington"],
     "region": "Oceania",
+    "subregion": "Australia and New Zealand",
     "borders": []
   },
   {
@@ -1801,6 +1877,7 @@
     "cca3": "LAO",
     "capital": ["Vientiane"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["MMR", "KHM", "CHN", "THA", "VNM"]
   },
   {
@@ -1826,6 +1903,7 @@
     "cca3": "BDI",
     "capital": ["Gitega"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["COD", "RWA", "TZA"]
   },
   {
@@ -1851,6 +1929,7 @@
     "cca3": "PAK",
     "capital": ["Islamabad"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": ["AFG", "CHN", "IND", "IRN"]
   },
   {
@@ -1872,6 +1951,7 @@
     "cca3": "ARM",
     "capital": ["Yerevan"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["AZE", "GEO", "IRN", "TUR"]
   },
   {
@@ -1897,6 +1977,7 @@
     "cca3": "CZE",
     "capital": ["Prague"],
     "region": "Europe",
+    "subregion": "Central Europe",
     "borders": ["AUT", "DEU", "POL", "SVK"]
   },
   {
@@ -1918,6 +1999,7 @@
     "cca3": "SMR",
     "capital": ["City of San Marino"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": ["ITA"]
   },
   {
@@ -1939,6 +2021,7 @@
     "cca3": "STP",
     "capital": ["São Tomé"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": []
   },
   {
@@ -1964,6 +2047,7 @@
     "cca3": "NIU",
     "capital": ["Alofi"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -1985,6 +2069,7 @@
     "cca3": "BHS",
     "capital": ["Nassau"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -2010,6 +2095,7 @@
     "cca3": "FIN",
     "capital": ["Helsinki"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["NOR", "SWE", "RUS"]
   },
   {
@@ -2031,6 +2117,7 @@
     "cca3": "GTM",
     "capital": ["Guatemala City"],
     "region": "Americas",
+    "subregion": "Central America",
     "borders": ["BLZ", "SLV", "HND", "MEX"]
   },
   {
@@ -2052,6 +2139,7 @@
     "cca3": "SLE",
     "capital": ["Freetown"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["GIN", "LBR"]
   },
   {
@@ -2081,6 +2169,7 @@
     "cca3": "LUX",
     "capital": ["Luxembourg"],
     "region": "Europe",
+    "subregion": "Western Europe",
     "borders": ["BEL", "FRA", "DEU"]
   },
   {
@@ -2106,6 +2195,7 @@
     "cca3": "TUV",
     "capital": ["Funafuti"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -2135,6 +2225,7 @@
     "cca3": "ERI",
     "capital": ["Asmara"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["DJI", "ETH", "SDN"]
   },
   {
@@ -2164,6 +2255,7 @@
     "cca3": "JEY",
     "capital": ["Saint Helier"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": []
   },
   {
@@ -2185,6 +2277,7 @@
     "cca3": "HND",
     "capital": ["Tegucigalpa"],
     "region": "Americas",
+    "subregion": "Central America",
     "borders": ["GTM", "SLV", "NIC"]
   },
   {
@@ -2214,6 +2307,7 @@
     "cca3": "ESH",
     "capital": ["El Aaiún"],
     "region": "Africa",
+    "subregion": "Northern Africa",
     "borders": ["DZA", "MRT", "MAR"]
   },
   {
@@ -2235,6 +2329,7 @@
     "cca3": "SEN",
     "capital": ["Dakar"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["GMB", "GIN", "GNB", "MLI", "MRT"]
   },
   {
@@ -2256,6 +2351,7 @@
     "cca3": "SJM",
     "capital": ["Longyearbyen"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": []
   },
   {
@@ -2277,6 +2373,7 @@
     "cca3": "NPL",
     "capital": ["Kathmandu"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": ["CHN", "IND"]
   },
   {
@@ -2298,6 +2395,7 @@
     "cca3": "ATG",
     "capital": ["Saint John's"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -2319,6 +2417,7 @@
     "cca3": "CPV",
     "capital": ["Praia"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": []
   },
   {
@@ -2340,6 +2439,7 @@
     "cca3": "BGD",
     "capital": ["Dhaka"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": ["MMR", "IND"]
   },
   {
@@ -2365,6 +2465,7 @@
     "cca3": "KGZ",
     "capital": ["Bishkek"],
     "region": "Asia",
+    "subregion": "Central Asia",
     "borders": ["CHN", "KAZ", "TJK", "UZB"]
   },
   {
@@ -2386,6 +2487,7 @@
     "cca3": "AIA",
     "capital": ["The Valley"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -2407,6 +2509,7 @@
     "cca3": "NGA",
     "capital": ["Abuja"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["BEN", "CMR", "TCD", "NER"]
   },
   {
@@ -2428,6 +2531,7 @@
     "cca3": "ESP",
     "capital": ["Madrid"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": ["AND", "FRA", "GIB", "PRT", "MAR"]
   },
   {
@@ -2449,6 +2553,7 @@
     "cca3": "VGB",
     "capital": ["Road Town"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -2474,6 +2579,7 @@
     "cca3": "MHL",
     "capital": ["Majuro"],
     "region": "Oceania",
+    "subregion": "Micronesia",
     "borders": []
   },
   {
@@ -2495,6 +2601,7 @@
     "cca3": "MYT",
     "capital": ["Mamoudzou"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": []
   },
   {
@@ -2516,6 +2623,7 @@
     "cca3": "QAT",
     "capital": ["Doha"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["SAU"]
   },
   {
@@ -2537,6 +2645,7 @@
     "cca3": "VEN",
     "capital": ["Caracas"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["BRA", "COL", "GUY"]
   },
   {
@@ -2558,6 +2667,7 @@
     "cca3": "TUN",
     "capital": ["Tunis"],
     "region": "Africa",
+    "subregion": "Northern Africa",
     "borders": ["DZA", "LBY"]
   },
   {
@@ -2579,6 +2689,7 @@
     "cca3": "MCO",
     "capital": ["Monaco"],
     "region": "Europe",
+    "subregion": "Western Europe",
     "borders": ["FRA"]
   },
   {
@@ -2600,6 +2711,7 @@
     "cca3": "UMI",
     "capital": ["Washington DC"],
     "region": "Americas",
+    "subregion": "North America",
     "borders": []
   },
   {
@@ -2625,6 +2737,7 @@
     "cca3": "CAF",
     "capital": ["Bangui"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["CMR", "TCD", "COD", "COG", "SSD", "SDN"]
   },
   {
@@ -2650,6 +2763,7 @@
     "cca3": "MAC",
     "capital": [],
     "region": "Asia",
+    "subregion": "Eastern Asia",
     "borders": ["CHN"]
   },
   {
@@ -2671,6 +2785,7 @@
     "cca3": "LVA",
     "capital": ["Riga"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["BLR", "EST", "LTU", "RUS"]
   },
   {
@@ -2696,6 +2811,7 @@
     "cca3": "UZB",
     "capital": ["Tashkent"],
     "region": "Asia",
+    "subregion": "Central Asia",
     "borders": ["AFG", "KAZ", "KGZ", "TJK", "TKM"]
   },
   {
@@ -2717,6 +2833,7 @@
     "cca3": "BRA",
     "capital": ["Brasília"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": [
       "ARG",
       "BOL",
@@ -2753,6 +2870,7 @@
     "cca3": "CYP",
     "capital": ["Nicosia"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": []
   },
   {
@@ -2774,6 +2892,7 @@
     "cca3": "PRK",
     "capital": ["Pyongyang"],
     "region": "Asia",
+    "subregion": "Eastern Asia",
     "borders": ["CHN", "KOR", "RUS"]
   },
   {
@@ -2795,6 +2914,7 @@
     "cca3": "DMA",
     "capital": ["Roseau"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -2824,6 +2944,7 @@
     "cca3": "BIH",
     "capital": ["Sarajevo"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["HRV", "MNE", "SRB"]
   },
   {
@@ -2845,6 +2966,7 @@
     "cca3": "CCK",
     "capital": ["West Island"],
     "region": "Oceania",
+    "subregion": "Australia and New Zealand",
     "borders": []
   },
   {
@@ -2870,6 +2992,7 @@
     "cca3": "LKA",
     "capital": ["Sri Jayawardenepura Kotte"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": ["IND"]
   },
   {
@@ -2899,6 +3022,7 @@
     "cca3": "COG",
     "capital": ["Brazzaville"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["AGO", "CMR", "CAF", "COD", "GAB"]
   },
   {
@@ -2924,6 +3048,7 @@
     "cca3": "ISR",
     "capital": ["Jerusalem"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["EGY", "JOR", "LBN", "PSE", "SYR"]
   },
   {
@@ -2977,6 +3102,7 @@
     "cca3": "NAM",
     "capital": ["Windhoek"],
     "region": "Africa",
+    "subregion": "Southern Africa",
     "borders": ["AGO", "BWA", "ZAF", "ZMB"]
   },
   {
@@ -2998,6 +3124,7 @@
     "cca3": "FSM",
     "capital": ["Palikir"],
     "region": "Oceania",
+    "subregion": "Micronesia",
     "borders": []
   },
   {
@@ -3019,6 +3146,7 @@
     "cca3": "HMD",
     "capital": [],
     "region": "Antarctic",
+    "subregion": "",
     "borders": []
   },
   {
@@ -3040,6 +3168,7 @@
     "cca3": "SSD",
     "capital": ["Juba"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["CAF", "COD", "ETH", "KEN", "SDN", "UGA"]
   },
   {
@@ -3069,6 +3198,7 @@
     "cca3": "RWA",
     "capital": ["Kigali"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["BDI", "COD", "TZA", "UGA"]
   },
   {
@@ -3094,6 +3224,7 @@
     "cca3": "UGA",
     "capital": ["Kampala"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["COD", "KEN", "RWA", "SSD", "TZA"]
   },
   {
@@ -3115,6 +3246,7 @@
     "cca3": "PRT",
     "capital": ["Lisbon"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": ["ESP"]
   },
   {
@@ -3148,6 +3280,7 @@
     "cca3": "BOL",
     "capital": ["Sucre"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["ARG", "BRA", "CHL", "PRY", "PER"]
   },
   {
@@ -3173,6 +3306,7 @@
     "cca3": "LSO",
     "capital": ["Maseru"],
     "region": "Africa",
+    "subregion": "Southern Africa",
     "borders": ["ZAF"]
   },
   {
@@ -3198,6 +3332,7 @@
     "cca3": "TCD",
     "capital": ["N'Djamena"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["CMR", "CAF", "LBY", "NER", "NGA", "SDN"]
   },
   {
@@ -3219,6 +3354,7 @@
     "cca3": "SHN",
     "capital": ["Jamestown"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": []
   },
   {
@@ -3244,6 +3380,7 @@
     "cca3": "COK",
     "capital": ["Avarua"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -3265,6 +3402,7 @@
     "cca3": "SPM",
     "capital": ["Saint-Pierre"],
     "region": "Americas",
+    "subregion": "North America",
     "borders": []
   },
   {
@@ -3286,6 +3424,7 @@
     "cca3": "LTU",
     "capital": ["Vilnius"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["BLR", "LVA", "POL", "RUS"]
   },
   {
@@ -3307,6 +3446,7 @@
     "cca3": "MNE",
     "capital": ["Podgorica"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["ALB", "BIH", "HRV", "UNK", "SRB"]
   },
   {
@@ -3328,6 +3468,7 @@
     "cca3": "OMN",
     "capital": ["Muscat"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["SAU", "ARE", "YEM"]
   },
   {
@@ -3353,6 +3494,7 @@
     "cca3": "SDN",
     "capital": ["Khartoum"],
     "region": "Africa",
+    "subregion": "Northern Africa",
     "borders": ["CAF", "TCD", "EGY", "ERI", "ETH", "LBY", "SSD"]
   },
   {
@@ -3374,6 +3516,7 @@
     "cca3": "BRN",
     "capital": ["Bandar Seri Begawan"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["MYS"]
   },
   {
@@ -3411,6 +3554,7 @@
     "cca3": "COD",
     "capital": ["Kinshasa"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["AGO", "BDI", "CAF", "COG", "RWA", "SSD", "TZA", "UGA", "ZMB"]
   },
   {
@@ -3432,6 +3576,7 @@
     "cca3": "GRC",
     "capital": ["Athens"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": ["ALB", "BGR", "TUR", "MKD"]
   },
   {
@@ -3453,6 +3598,7 @@
     "cca3": "ALB",
     "capital": ["Tirana"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["MNE", "GRC", "MKD", "UNK"]
   },
   {
@@ -3478,6 +3624,7 @@
     "cca3": "TZA",
     "capital": ["Dodoma"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["BDI", "COD", "KEN", "MWI", "MOZ", "RWA", "UGA", "ZMB"]
   },
   {
@@ -3499,6 +3646,7 @@
     "cca3": "GEO",
     "capital": ["Tbilisi"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["ARM", "AZE", "RUS", "TUR"]
   },
   {
@@ -3520,6 +3668,7 @@
     "cca3": "JPN",
     "capital": ["Tokyo"],
     "region": "Asia",
+    "subregion": "Eastern Asia",
     "borders": []
   },
   {
@@ -3541,6 +3690,7 @@
     "cca3": "SAU",
     "capital": ["Riyadh"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["IRQ", "JOR", "KWT", "OMN", "QAT", "ARE", "YEM"]
   },
   {
@@ -3562,6 +3712,7 @@
     "cca3": "HRV",
     "capital": ["Zagreb"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["BIH", "HUN", "MNE", "SRB", "SVN"]
   },
   {
@@ -3583,6 +3734,7 @@
     "cca3": "SLB",
     "capital": ["Honiara"],
     "region": "Oceania",
+    "subregion": "Melanesia",
     "borders": []
   },
   {
@@ -3604,6 +3756,7 @@
     "cca3": "YEM",
     "capital": ["Sana'a"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["OMN", "SAU"]
   },
   {
@@ -3629,6 +3782,7 @@
     "cca3": "SOM",
     "capital": ["Mogadishu"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["DJI", "ETH", "KEN"]
   },
   {
@@ -3650,6 +3804,7 @@
     "cca3": "GRD",
     "capital": ["St. George's"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -3675,6 +3830,7 @@
     "cca3": "TON",
     "capital": ["Nuku'alofa"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -3696,6 +3852,7 @@
     "cca3": "NIC",
     "capital": ["Managua"],
     "region": "Americas",
+    "subregion": "Central America",
     "borders": ["CRI", "HND"]
   },
   {
@@ -3721,6 +3878,7 @@
     "cca3": "PRY",
     "capital": ["Asunción"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["ARG", "BOL", "BRA"]
   },
   {
@@ -3750,6 +3908,7 @@
     "cca3": "IND",
     "capital": ["New Delhi"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": ["BGD", "BTN", "MMR", "CHN", "NPL", "PAK"]
   },
   {
@@ -3771,6 +3930,7 @@
     "cca3": "GBR",
     "capital": ["London"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["IRL"]
   },
   {
@@ -3796,6 +3956,7 @@
     "cca3": "SWZ",
     "capital": ["Mbabane"],
     "region": "Africa",
+    "subregion": "Southern Africa",
     "borders": ["MOZ", "ZAF"]
   },
   {
@@ -3821,6 +3982,7 @@
     "cca3": "MDG",
     "capital": ["Antananarivo"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": []
   },
   {
@@ -3850,6 +4012,7 @@
     "cca3": "GNQ",
     "capital": ["Malabo"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["CMR", "GAB"]
   },
   {
@@ -3871,6 +4034,7 @@
     "cca3": "JOR",
     "capital": ["Amman"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["IRQ", "ISR", "PSE", "SAU", "SYR"]
   },
   {
@@ -3892,6 +4056,7 @@
     "cca3": "GLP",
     "capital": ["Basse-Terre"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -3917,6 +4082,7 @@
     "cca3": "BLR",
     "capital": ["Minsk"],
     "region": "Europe",
+    "subregion": "Eastern Europe",
     "borders": ["LVA", "LTU", "POL", "RUS", "UKR"]
   },
   {
@@ -3938,6 +4104,7 @@
     "cca3": "MDV",
     "capital": ["Malé"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": []
   },
   {
@@ -3963,6 +4130,7 @@
     "cca3": "TLS",
     "capital": ["Dili"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["IDN"]
   },
   {
@@ -3984,6 +4152,7 @@
     "cca3": "SRB",
     "capital": ["Belgrade"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["BIH", "BGR", "HRV", "HUN", "UNK", "MKD", "MNE", "ROU"]
   },
   {
@@ -4009,6 +4178,7 @@
     "cca3": "IRL",
     "capital": ["Dublin"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["GBR"]
   },
   {
@@ -4030,6 +4200,7 @@
     "cca3": "CHL",
     "capital": ["Santiago"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["ARG", "BOL", "PER"]
   },
   {
@@ -4059,6 +4230,7 @@
     "cca3": "IRQ",
     "capital": ["Baghdad"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["IRN", "JOR", "KWT", "SAU", "SYR", "TUR"]
   },
   {
@@ -4084,6 +4256,7 @@
     "cca3": "PHL",
     "capital": ["Manila"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": []
   },
   {
@@ -4145,6 +4318,7 @@
     "cca3": "ZAF",
     "capital": ["Pretoria", "Bloemfontein", "Cape Town"],
     "region": "Africa",
+    "subregion": "Southern Africa",
     "borders": ["BWA", "LSO", "MOZ", "NAM", "SWZ", "ZWE"]
   },
   {
@@ -4166,6 +4340,7 @@
     "cca3": "BEN",
     "capital": ["Porto-Novo"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["BFA", "NER", "NGA", "TGO"]
   },
   {
@@ -4187,6 +4362,7 @@
     "cca3": "BGR",
     "capital": ["Sofia"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["GRC", "MKD", "ROU", "SRB", "TUR"]
   },
   {
@@ -4208,6 +4384,7 @@
     "cca3": "IDN",
     "capital": ["Jakarta"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["TLS", "MYS", "PNG"]
   },
   {
@@ -4229,6 +4406,7 @@
     "cca3": "MRT",
     "capital": ["Nouakchott"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["DZA", "MLI", "SEN", "ESH"]
   },
   {
@@ -4258,6 +4436,7 @@
     "cca3": "SYC",
     "capital": ["Victoria"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": []
   },
   {
@@ -4279,6 +4458,7 @@
     "cca3": "ROU",
     "capital": ["Bucharest"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["BGR", "HUN", "MDA", "SRB", "UKR"]
   },
   {
@@ -4300,6 +4480,7 @@
     "cca3": "TUR",
     "capital": ["Ankara"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["ARM", "AZE", "BGR", "GEO", "GRC", "IRN", "IRQ", "SYR"]
   },
   {
@@ -4321,6 +4502,7 @@
     "cca3": "BFA",
     "capital": ["Ouagadougou"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["BEN", "CIV", "GHA", "MLI", "NER", "TGO"]
   },
   {
@@ -4342,6 +4524,7 @@
     "cca3": "BMU",
     "capital": ["Hamilton"],
     "region": "Americas",
+    "subregion": "North America",
     "borders": []
   },
   {
@@ -4363,6 +4546,7 @@
     "cca3": "NCL",
     "capital": ["Nouméa"],
     "region": "Oceania",
+    "subregion": "Melanesia",
     "borders": []
   },
   {
@@ -4379,6 +4563,7 @@
     "cca3": "ATA",
     "capital": [],
     "region": "Antarctic",
+    "subregion": "",
     "borders": []
   },
   {
@@ -4400,6 +4585,7 @@
     "cca3": "EGY",
     "capital": ["Cairo"],
     "region": "Africa",
+    "subregion": "Northern Africa",
     "borders": ["ISR", "LBY", "PSE", "SDN"]
   },
   {
@@ -4421,6 +4607,7 @@
     "cca3": "VNM",
     "capital": ["Hanoi"],
     "region": "Asia",
+    "subregion": "South-Eastern Asia",
     "borders": ["KHM", "CHN", "LAO"]
   },
   {
@@ -4446,6 +4633,7 @@
     "cca3": "PRI",
     "capital": ["San Juan"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -4467,6 +4655,7 @@
     "cca3": "TTO",
     "capital": ["Port of Spain"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -4488,6 +4677,7 @@
     "cca3": "FLK",
     "capital": ["Stanley"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": []
   },
   {
@@ -4509,6 +4699,7 @@
     "cca3": "AGO",
     "capital": ["Luanda"],
     "region": "Africa",
+    "subregion": "Middle Africa",
     "borders": ["COG", "COD", "ZMB", "NAM"]
   },
   {
@@ -4530,6 +4721,7 @@
     "cca3": "CHN",
     "capital": ["Beijing"],
     "region": "Asia",
+    "subregion": "Eastern Asia",
     "borders": [
       "AFG",
       "BTN",
@@ -4568,6 +4760,7 @@
     "cca3": "MSR",
     "capital": ["Plymouth"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -4589,6 +4782,7 @@
     "cca3": "TCA",
     "capital": ["Cockburn Town"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -4610,6 +4804,7 @@
     "cca3": "ALA",
     "capital": ["Mariehamn"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": []
   },
   {
@@ -4631,6 +4826,7 @@
     "cca3": "CRI",
     "capital": ["San José"],
     "region": "Americas",
+    "subregion": "Central America",
     "borders": ["NIC", "PAN"]
   },
   {
@@ -4652,6 +4848,7 @@
     "cca3": "URY",
     "capital": ["Montevideo"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["ARG", "BRA"]
   },
   {
@@ -4677,6 +4874,7 @@
     "cca3": "MAR",
     "capital": ["Rabat"],
     "region": "Africa",
+    "subregion": "Northern Africa",
     "borders": ["DZA", "ESH", "ESP"]
   },
   {
@@ -4698,6 +4896,7 @@
     "cca3": "BVT",
     "capital": [],
     "region": "Antarctic",
+    "subregion": "",
     "borders": []
   },
   {
@@ -4719,6 +4918,7 @@
     "cca3": "EST",
     "capital": ["Tallinn"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["LVA", "RUS"]
   },
   {
@@ -4740,6 +4940,7 @@
     "cca3": "LCA",
     "capital": ["Castries"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -4761,6 +4962,7 @@
     "cca3": "TWN",
     "capital": ["Taipei"],
     "region": "Asia",
+    "subregion": "Eastern Asia",
     "borders": []
   },
   {
@@ -4786,6 +4988,7 @@
     "cca3": "HTI",
     "capital": ["Port-au-Prince"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": ["DOM"]
   },
   {
@@ -4811,6 +5014,7 @@
     "cca3": "TJK",
     "capital": ["Dushanbe"],
     "region": "Asia",
+    "subregion": "Central Asia",
     "borders": ["AFG", "CHN", "KGZ", "UZB"]
   },
   {
@@ -4832,6 +5036,7 @@
     "cca3": "NER",
     "capital": ["Niamey"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["DZA", "BEN", "BFA", "TCD", "LBY", "MLI", "NGA"]
   },
   {
@@ -4857,6 +5062,7 @@
     "cca3": "LBN",
     "capital": ["Beirut"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["ISR", "SYR"]
   },
   {
@@ -4878,6 +5084,7 @@
     "cca3": "AUS",
     "capital": ["Canberra"],
     "region": "Oceania",
+    "subregion": "Australia and New Zealand",
     "borders": []
   },
   {
@@ -4899,6 +5106,7 @@
     "cca3": "LBR",
     "capital": ["Monrovia"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["GIN", "CIV", "SLE"]
   },
   {
@@ -4920,6 +5128,7 @@
     "cca3": "ITA",
     "capital": ["Rome"],
     "region": "Europe",
+    "subregion": "Southern Europe",
     "borders": ["AUT", "FRA", "SMR", "SVN", "CHE", "VAT"]
   },
   {
@@ -4949,6 +5158,7 @@
     "cca3": "MNP",
     "capital": ["Saipan"],
     "region": "Oceania",
+    "subregion": "Micronesia",
     "borders": []
   },
   {
@@ -4970,6 +5180,7 @@
     "cca3": "MAF",
     "capital": ["Marigot"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": ["SXM"]
   },
   {
@@ -4995,6 +5206,7 @@
     "cca3": "NRU",
     "capital": ["Yaren"],
     "region": "Oceania",
+    "subregion": "Micronesia",
     "borders": []
   },
   {
@@ -5028,6 +5240,7 @@
     "cca3": "CHE",
     "capital": ["Bern"],
     "region": "Europe",
+    "subregion": "Western Europe",
     "borders": ["AUT", "FRA", "ITA", "LIE", "DEU"]
   },
   {
@@ -5057,6 +5270,7 @@
     "cca3": "PER",
     "capital": ["Lima"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["BOL", "BRA", "CHL", "COL", "ECU"]
   },
   {
@@ -5078,6 +5292,7 @@
     "cca3": "LBY",
     "capital": ["Tripoli"],
     "region": "Africa",
+    "subregion": "Northern Africa",
     "borders": ["DZA", "TCD", "EGY", "NER", "SDN", "TUN"]
   },
   {
@@ -5099,6 +5314,7 @@
     "cca3": "DEU",
     "capital": ["Berlin"],
     "region": "Europe",
+    "subregion": "Western Europe",
     "borders": ["AUT", "BEL", "CZE", "DNK", "FRA", "LUX", "NLD", "POL", "CHE"]
   },
   {
@@ -5124,6 +5340,7 @@
     "cca3": "UNK",
     "capital": ["Pristina"],
     "region": "Europe",
+    "subregion": "Southeast Europe",
     "borders": ["ALB", "MKD", "MNE", "SRB"]
   },
   {
@@ -5153,6 +5370,7 @@
     "cca3": "GUM",
     "capital": ["Hagåtña"],
     "region": "Oceania",
+    "subregion": "Micronesia",
     "borders": []
   },
   {
@@ -5174,6 +5392,7 @@
     "cca3": "BHR",
     "capital": ["Manama"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": []
   },
   {
@@ -5195,6 +5414,7 @@
     "cca3": "WLF",
     "capital": ["Mata-Utu"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -5216,6 +5436,7 @@
     "cca3": "IRN",
     "capital": ["Tehran"],
     "region": "Asia",
+    "subregion": "Southern Asia",
     "borders": ["AFG", "ARM", "AZE", "IRQ", "PAK", "TUR", "TKM"]
   },
   {
@@ -5237,6 +5458,7 @@
     "cca3": "PAN",
     "capital": ["Panama City"],
     "region": "Americas",
+    "subregion": "Central America",
     "borders": ["COL", "CRI"]
   },
   {
@@ -5266,6 +5488,7 @@
     "cca3": "TKL",
     "capital": ["Fakaofo"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -5287,6 +5510,7 @@
     "cca3": "SYR",
     "capital": ["Damascus"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["IRQ", "ISR", "JOR", "LBN", "TUR"]
   },
   {
@@ -5308,6 +5532,7 @@
     "cca3": "KNA",
     "capital": ["Basseterre"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -5329,6 +5554,7 @@
     "cca3": "GMB",
     "capital": ["Banjul"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["SEN"]
   },
   {
@@ -5354,6 +5580,7 @@
     "cca3": "BES",
     "capital": ["Kralendijk"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -5375,6 +5602,7 @@
     "cca3": "IOT",
     "capital": ["Diego Garcia"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": []
   },
   {
@@ -5396,6 +5624,7 @@
     "cca3": "NLD",
     "capital": ["Amsterdam"],
     "region": "Europe",
+    "subregion": "Western Europe",
     "borders": ["BEL", "DEU"]
   },
   {
@@ -5417,6 +5646,7 @@
     "cca3": "SLV",
     "capital": ["San Salvador"],
     "region": "Americas",
+    "subregion": "Central America",
     "borders": ["GTM", "HND"]
   },
   {
@@ -5438,6 +5668,7 @@
     "cca3": "CIV",
     "capital": ["Yamoussoukro"],
     "region": "Africa",
+    "subregion": "Western Africa",
     "borders": ["BFA", "GHA", "GIN", "LBR", "MLI"]
   },
   {
@@ -5463,6 +5694,7 @@
     "cca3": "KIR",
     "capital": ["South Tarawa"],
     "region": "Oceania",
+    "subregion": "Micronesia",
     "borders": []
   },
   {
@@ -5484,6 +5716,7 @@
     "cca3": "BLM",
     "capital": ["Gustavia"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -5509,6 +5742,7 @@
     "cca3": "ASM",
     "capital": ["Pago Pago"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -5534,6 +5768,7 @@
     "cca3": "ABW",
     "capital": ["Oranjestad"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -5555,6 +5790,7 @@
     "cca3": "GUF",
     "capital": ["Cayenne"],
     "region": "Americas",
+    "subregion": "South America",
     "borders": ["BRA", "SUR"]
   },
   {
@@ -5580,6 +5816,7 @@
     "cca3": "PLW",
     "capital": ["Ngerulmud"],
     "region": "Oceania",
+    "subregion": "Micronesia",
     "borders": []
   },
   {
@@ -5601,6 +5838,7 @@
     "cca3": "VCT",
     "capital": ["Kingstown"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -5622,6 +5860,7 @@
     "cca3": "POL",
     "capital": ["Warsaw"],
     "region": "Europe",
+    "subregion": "Central Europe",
     "borders": ["BLR", "CZE", "DEU", "LTU", "RUS", "SVK", "UKR"]
   },
   {
@@ -5643,6 +5882,7 @@
     "cca3": "BRB",
     "capital": ["Bridgetown"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": []
   },
   {
@@ -5668,6 +5908,7 @@
     "cca3": "IMN",
     "capital": ["Douglas"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": []
   },
   {
@@ -5689,6 +5930,7 @@
     "cca3": "GRL",
     "capital": ["Nuuk"],
     "region": "Americas",
+    "subregion": "North America",
     "borders": []
   },
   {
@@ -5766,6 +6008,7 @@
     "cca3": "ZWE",
     "capital": ["Harare"],
     "region": "Africa",
+    "subregion": "Southern Africa",
     "borders": ["BWA", "MOZ", "ZAF", "ZMB"]
   },
   {
@@ -5787,6 +6030,7 @@
     "cca3": "PCN",
     "capital": ["Adamstown"],
     "region": "Oceania",
+    "subregion": "Polynesia",
     "borders": []
   },
   {
@@ -5808,6 +6052,7 @@
     "cca3": "SWE",
     "capital": ["Stockholm"],
     "region": "Europe",
+    "subregion": "Northern Europe",
     "borders": ["FIN", "NOR"]
   },
   {
@@ -5829,6 +6074,7 @@
     "cca3": "DOM",
     "capital": ["Santo Domingo"],
     "region": "Americas",
+    "subregion": "Caribbean",
     "borders": ["HTI"]
   },
   {
@@ -5858,6 +6104,7 @@
     "cca3": "BEL",
     "capital": ["Brussels"],
     "region": "Europe",
+    "subregion": "Western Europe",
     "borders": ["FRA", "DEU", "LUX", "NLD"]
   },
   {
@@ -5879,6 +6126,7 @@
     "cca3": "MOZ",
     "capital": ["Maputo"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": ["MWI", "ZAF", "SWZ", "TZA", "ZMB", "ZWE"]
   },
   {
@@ -5908,6 +6156,7 @@
     "cca3": "MUS",
     "capital": ["Port Louis"],
     "region": "Africa",
+    "subregion": "Eastern Africa",
     "borders": []
   },
   {
@@ -5929,6 +6178,7 @@
     "cca3": "AZE",
     "capital": ["Baku"],
     "region": "Asia",
+    "subregion": "Western Asia",
     "borders": ["ARM", "GEO", "IRN", "RUS", "TUR"]
   }
 ]
