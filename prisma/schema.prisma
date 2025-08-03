@@ -25,14 +25,30 @@ model User {
   Collection Collection[]
 }
 
+model Region {
+  id Int @id @default(autoincrement())
+  name String @unique @db.Text()
+  SubRegion SubRegion[]
+}
+
+model SubRegion {
+  id Int @id @default(autoincrement())
+  name String @unique @db.Text()
+  regionId Int
+  Region Region @relation(fields: [regionId], references: [id])
+  Country Country[]
+  Product Product[]
+}
+
 model Country {
   id Int @id @default(autoincrement())
   name String @unique @db.Text()
   countryCode String @db.Text()
   flag String @db.VarChar(255)
-  region String? @db.Text()
+  subRegionId Int 
+  SubRegion SubRegion @relation(fields: [subRegionId], references: [id])
   User User[]
-  Product Product[]
+  products ProductsOnCountries[]
 }
 
 model Product {
@@ -41,13 +57,23 @@ model Product {
   description String @db.VarChar(255)
   lore String? @db.VarChar(255)
   image String? @db.VarChar(255)
-  whereToBuy String? @db.VarChar(255)
-  countryId Int
-  Country Country @relation(fields: [countryId], references: [id])
+  subregionId Int
+  SubRegion SubRegion @relation(fields: [subregionId], references: [id])
   Category Category @relation(fields: [categoryId], references: [id])
+  countries ProductsOnCountries[]
   categoryId Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+}
+
+// Pivot table (or JOIN table)
+model ProductsOnCountries {
+  product Product @relation(fields: [productId], references: [id])
+  productId Int
+  country Country @relation(fields: [countryId], references: [id])
+  countryId Int
+
+  @@id([productId, countryId])
 }
 
 model Category {
