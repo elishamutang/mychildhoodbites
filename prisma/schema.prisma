@@ -68,9 +68,9 @@ model Product {
 
 // Pivot table (or JOIN table)
 model ProductsOnCountries {
-  product Product @relation(fields: [productId], references: [id])
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId Int
-  country Country @relation(fields: [countryId], references: [id])
+  country Country @relation(fields: [countryId], references: [id], onDelete: Cascade)
   countryId Int
 
   @@id([productId, countryId])
