@@ -1,4 +1,4 @@
-import SignInForm from "@/components/signInForm";
+import SignIn from "@/components/signInForm";
 import {
   Dialog,
   DialogContent,
@@ -20,7 +20,7 @@ export default async function Page() {
           <DialogDescription className="text-center">
             Take a trip down memory lane.
           </DialogDescription>
-          <SignInForm className="p-0 md:w-full border-none" />
+          <SignIn className="p-0 md:w-full border-none" />
         </DialogHeader>
         <DialogFooter></DialogFooter>
       </DialogContent>
