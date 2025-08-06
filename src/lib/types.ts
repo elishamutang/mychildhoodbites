@@ -14,6 +14,11 @@ export type SignInData = {
     password: string
 }
 
+export type SignUpData = SignInData & {
+    name: string,
+    country: number
+}
+
 export type SignInResult = {
     success: boolean,
     message?: string,
