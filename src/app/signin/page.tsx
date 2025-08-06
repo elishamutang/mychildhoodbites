@@ -1,5 +1,5 @@
 import Heading from "@/components/heading";
-import SignInForm from "@/components/signInForm";
+import SignIn from "@/components/signInForm";
 
 export default function Page() {
   return (
@@ -10,7 +10,7 @@ export default function Page() {
       </Heading>
 
       {/* Sign In Form */}
-      <SignInForm />
+      <SignIn />
     </section>
   );
 }
