@@ -4,13 +4,23 @@ import { useDisclosure } from "@mantine/hooks";
 import { Burger } from "@mantine/core";
 import Link from "next/link";
 import { BlurFade } from "./magicui/blur-fade";
-import { MouseEventHandler, useRef } from "react";
+import { MouseEventHandler, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import type { UserSession } from "@/lib/types";
+import SignOut from "./signOut";
 
-export default function Nav() {
+export default function Nav({
+  userSession,
+}: {
+  userSession: UserSession | undefined;
+}) {
   const [opened, { toggle }] = useDisclosure();
   const navElem = useRef<HTMLElement>(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    console.log(userSession);
+  });
 
   const handleClick: MouseEventHandler<HTMLAnchorElement> = (event) => {
     if (navElem) {
@@ -46,7 +56,7 @@ export default function Nav() {
         </Link>
 
         {/* Sign-in */}
-        {pathname !== "/signin" && (
+        {pathname !== "/signin" && pathname !== "/signup" && !userSession && (
           <Link
             href="/signin"
             className="bg-green-600 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-lg text-white"
@@ -54,6 +64,9 @@ export default function Nav() {
             Sign In
           </Link>
         )}
+
+        {/* Sign-out */}
+        {userSession && <SignOut />}
       </BlurFade>
 
       {/* Show overlay */}
