@@ -4,11 +4,13 @@ import { useDisclosure } from "@mantine/hooks";
 import { Burger } from "@mantine/core";
 import Link from "next/link";
 import { BlurFade } from "./magicui/blur-fade";
-import { MouseEventHandler, useEffect, useRef } from "react";
+import { MouseEventHandler, useRef } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Nav() {
   const [opened, { toggle }] = useDisclosure();
   const navElem = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   const handleClick: MouseEventHandler<HTMLAnchorElement> = (event) => {
     if (navElem) {
@@ -29,6 +31,7 @@ export default function Nav() {
       />
 
       <BlurFade delay={0.25 * 2} inView className="mx-2 hidden md:flex gap-5">
+        {/* Navigation */}
         <Link
           href="/products"
           className="hover:text-white hover:bg-blue-600 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-lg text-blue-600"
@@ -41,6 +44,16 @@ export default function Nav() {
         >
           Categories
         </Link>
+
+        {/* Sign-in */}
+        {pathname !== "/signin" && (
+          <Link
+            href="/signin"
+            className="bg-green-600 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-lg text-white"
+          >
+            Sign In
+          </Link>
+        )}
       </BlurFade>
 
       {/* Show overlay */}
