@@ -61,7 +61,7 @@ export async function signIn(initialState: any, formData: FormData): Promise<Sig
             body: {
                 email: validated.data.email,
                 password: validated.data.password,
-                callbackURL: '/dashboard'
+                callbackURL: 'http://localhost:3000/dashboard'
             },
             headers: await headers()
         })
