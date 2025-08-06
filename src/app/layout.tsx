@@ -24,9 +24,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   product,
+  auth,
   children,
 }: Readonly<{
   product: React.ReactNode;
+  auth: React.ReactNode;
   children: React.ReactNode;
 }>) {
   return (
@@ -38,6 +40,7 @@ export default function RootLayout({
           <MantineProvider>
             <Header />
             {product}
+            {auth}
             {children}
             <Footer />
           </MantineProvider>
