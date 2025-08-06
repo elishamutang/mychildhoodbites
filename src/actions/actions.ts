@@ -4,7 +4,7 @@ import { z } from 'zod'
 import { auth } from '@/lib/auth'
 import { headers } from 'next/headers'
 import { APIError } from 'better-auth/api'
-import { SignInData, SignInResult } from '@/lib/types'
+import { SignInData, SignInResult, SignUpData } from '@/lib/types'
 
 const Product = z.object({
     product: z.string()
@@ -15,6 +15,11 @@ const SignInSchema = z.object({
         error: 'Invalid email address.'
     }).nonempty(),
     password: z.string().nonempty({ error: 'Password must not be empty.' }).min(8, { error: 'Password must be at least 8 characters.' })
+})
+
+const SignUpSchema = SignInSchema.extend({
+    name: z.string().nonempty({ error: 'Name must not be empty' }),
+    country: z.number().nonnegative()
 })
 
 export async function getProduct(initialState: any, formData: FormData) {
@@ -62,6 +67,59 @@ export async function signIn(initialState: any, formData: FormData): Promise<Sig
         })
 
         console.log("User signed in: ", validated.data.email)
+        return { success: true }
+    } catch (error) {
+        if (error instanceof APIError) {
+            return {
+                success: false,
+                message: error.message,
+                statusCode: error.statusCode
+            }
+        }
+
+        return {
+            success: false,
+            message: 'Unexpected server error. Please try again.',
+            inputs: { ...rawData, password: '' }
+        }
+    }
+}
+
+
+// Handle user sign up
+export async function signUp(initialState: any, formData: FormData) {
+
+    const rawData: SignUpData = {
+        name: formData.get('name') as string,
+        email: formData.get('email') as string,
+        password: formData.get('password') as string,
+        country: parseInt(formData.get('country') as string)
+    }
+
+    const validated = SignUpSchema.safeParse(rawData)
+
+    if (!validated.success) {
+        return {
+            success: false,
+            message: 'Please fix the errors in the form.',
+            errors: z.flattenError(validated.error),
+            inputs: { ...rawData, password: '' }
+        }
+    }
+
+    try {
+        await auth.api.signUpEmail({
+            body: {
+                name: validated.data.name,
+                email: validated.data.email,
+                password: validated.data.password,
+                countryId: validated.data.country,
+                callbackURL: 'http://localhost:3000/dashboard'
+            },
+            headers: await headers()
+        })
+
+        console.log("User signed up: ", validated.data.email)
         return { success: true }
     } catch (error) {
         if (error instanceof APIError) {
