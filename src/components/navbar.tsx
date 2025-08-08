@@ -65,7 +65,7 @@ export default function Nav() {
         )}
 
         {/* Avatar */}
-        {userSession && <Avatar />}
+        {userSession && <Avatar name={userSession.user.name} />}
 
         {/* Sign-out */}
         {userSession && <SignOut />}
