@@ -5,6 +5,7 @@ import { auth } from '@/lib/auth'
 import { headers } from 'next/headers'
 import { APIError } from 'better-auth/api'
 import { SignInData, SignInResult, SignUpData } from '@/lib/types'
+import { redirect } from 'next/navigation'
 
 const Product = z.object({
     product: z.string()
@@ -57,17 +58,26 @@ export async function signIn(initialState: any, formData: FormData): Promise<Sig
     }
 
     try {
-        await auth.api.signInEmail({
+        const response = await auth.api.signInEmail({
             body: {
                 email: validated.data.email,
                 password: validated.data.password,
                 callbackURL: 'http://localhost:3000/dashboard'
             },
-            headers: await headers()
+            headers: await headers(),
+            asResponse: true
         })
 
+        if (!response.ok) {
+            const errorMsg = await response.json()
+            return {
+                success: false,
+                message: errorMsg.message,
+                statusCode: response.status
+            }
+        }
+
         console.log("User signed in: ", validated.data.email)
-        return { success: true }
     } catch (error) {
         if (error instanceof APIError) {
             return {
@@ -83,6 +93,8 @@ export async function signIn(initialState: any, formData: FormData): Promise<Sig
             inputs: { ...rawData, password: '' }
         }
     }
+
+    redirect('/dashboard')
 }
 
 
@@ -120,7 +132,6 @@ export async function signUp(initialState: any, formData: FormData) {
         })
 
         console.log("User signed up: ", validated.data.email)
-        return { success: true }
     } catch (error) {
         if (error instanceof APIError) {
             return {
@@ -136,4 +147,6 @@ export async function signUp(initialState: any, formData: FormData) {
             inputs: { ...rawData, password: '' }
         }
     }
+
+    redirect('/dashboard')
 }
