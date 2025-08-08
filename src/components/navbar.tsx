@@ -4,25 +4,24 @@ import { useDisclosure } from "@mantine/hooks";
 import { Burger } from "@mantine/core";
 import Link from "next/link";
 import { BlurFade } from "./magicui/blur-fade";
-import { MouseEventHandler, useEffect, useRef } from "react";
+import { MouseEventHandler, useRef } from "react";
 import { usePathname } from "next/navigation";
-import type { UserSession } from "@/lib/types";
+import { authClient } from "@/lib/auth-client";
+import Avatar from "./avatar";
 import SignOut from "./signOut";
 
-export default function Nav({
-  userSession,
-}: {
-  userSession: UserSession | undefined;
-}) {
+export default function Nav() {
   const [opened, { toggle }] = useDisclosure();
   const navElem = useRef<HTMLElement>(null);
   const pathname = usePathname();
 
-  useEffect(() => {
-    console.log(userSession);
-  });
+  // Get user session
+  const { useSession } = authClient;
+  const { data: userSession, isPending, error, refetch } = useSession();
 
-  const handleClick: MouseEventHandler<HTMLAnchorElement> = (event) => {
+  const handleClick: MouseEventHandler<
+    HTMLAnchorElement | HTMLButtonElement
+  > = () => {
     if (navElem) {
       navElem.current?.classList.toggle("top-0");
       navElem.current?.classList.toggle("-top-500");
@@ -65,6 +64,9 @@ export default function Nav({
           </Link>
         )}
 
+        {/* Avatar */}
+        {userSession && <Avatar />}
+
         {/* Sign-out */}
         {userSession && <SignOut />}
       </BlurFade>
@@ -74,7 +76,7 @@ export default function Nav({
         ref={navElem}
         className={`${
           opened ? "top-0 backdrop-blur-xs" : "-top-500"
-        } left-0 z-1 ease-in-out transition-all gap-3 duration-300 flex flex-col items-center justify-center bg-white text-black absolute w-full h-screen`}
+        } left-0 z-1 ease-in-out transition-all gap-4 duration-300 flex flex-col items-center justify-center bg-white text-black absolute w-full h-screen`}
       >
         <Link
           href="/products"
@@ -90,6 +92,28 @@ export default function Nav({
         >
           Categories
         </Link>
+
+        {/* Dashboard */}
+        {userSession && (
+          <Link
+            href="/dashboard"
+            className="text-2xl font-inter font-bold text-blue-600"
+            onClick={handleClick}
+          >
+            Dashboard
+          </Link>
+        )}
+
+        {/* Sign-out */}
+        {userSession && (
+          <button
+            type="button"
+            className=" text-zinc-400"
+            onClick={handleClick}
+          >
+            <span className="text-2xl font-inter font-bold">Sign Out</span>
+          </button>
+        )}
       </nav>
     </>
   );
