@@ -13,11 +13,11 @@ export default async function Page() {
     <Dialog defaultOpen={true}>
       <DialogContent className="sm:max-w-[425px] font-inter">
         <DialogHeader>
-          <DialogTitle className="text-3xl md:text-5xl font-bold text-start md:text-center">
+          <DialogTitle className="text-3xl md:text-5xl font-bold text-center">
             <span className="text-blue-600">Sign</span>{" "}
             <span className="text-green-600">In.</span>
           </DialogTitle>
-          <DialogDescription className="text-center">
+          <DialogDescription className="text-center mb-5">
             Take a trip down memory lane.
           </DialogDescription>
           <SignIn className="p-0 md:w-full border-none" />
