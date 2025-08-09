@@ -16,8 +16,6 @@ export default function SignUp({
 }) {
   const [state, action, isPending] = useActionState(signUp, null);
 
-  console.log(state);
-
   return (
     <form
       action={action}

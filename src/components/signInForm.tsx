@@ -1,21 +1,13 @@
 "use client";
 
 import GoogleSignIn from "./googleSignIn";
-import { useActionState, useEffect } from "react";
+import { useActionState } from "react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { signIn } from "@/actions/actions";
-import { usePathname } from "next/navigation";
 
 export default function SignIn({ className }: { className?: string }) {
   const [state, action, isPending] = useActionState(signIn, null);
-  const pathname = usePathname();
-
-  useEffect(() => {
-    if (pathname === "/dashboard") {
-      window.location.reload();
-    }
-  }, [pathname]);
 
   return (
     <form
