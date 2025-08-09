@@ -7,8 +7,17 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { headers } from "next/headers";
 
 export default async function Page() {
+  const headersList = Object.fromEntries((await headers()).entries());
+  const referrerURL = new URL(headersList.referer);
+
+  // Close modal.
+  if (referrerURL.pathname === "/signin") {
+    return null;
+  }
+
   return (
     <Dialog defaultOpen={true}>
       <DialogContent className="sm:max-w-[425px] font-inter">
