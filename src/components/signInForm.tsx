@@ -26,7 +26,7 @@ export default function SignIn({ className }: { className?: string }) {
       )}
     >
       <section className="flex flex-col">
-        <label htmlFor="email" className="font-bold text-blue-600">
+        <label htmlFor="email" className="font-bold text-blue-600 text-start">
           Email
         </label>
         <input
@@ -49,7 +49,10 @@ export default function SignIn({ className }: { className?: string }) {
       </section>
 
       <section className="flex flex-col">
-        <label htmlFor="password" className="font-bold text-blue-600">
+        <label
+          htmlFor="password"
+          className="font-bold text-blue-600 text-start"
+        >
           Password
         </label>
         <input
@@ -93,7 +96,7 @@ export default function SignIn({ className }: { className?: string }) {
       </section>
 
       {/* Alternative providers */}
-      <section>
+      <section className="self-start">
         <GoogleSignIn />
       </section>
     </form>
