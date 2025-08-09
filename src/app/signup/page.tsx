@@ -1,10 +1,21 @@
 import SignUp from "@/components/signUpForm";
 import Heading from "@/components/heading";
 import { prisma } from "@/lib/prisma";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { redirect } from "next/navigation";
 
 export default async function Page() {
   // Get countries
   const countries = await prisma.country.findMany();
+
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (session) {
+    redirect("/dashboard");
+  }
 
   return (
     <section className="flex font-inter flex-col items-center md:border rounded-lg">
