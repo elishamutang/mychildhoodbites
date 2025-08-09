@@ -4,7 +4,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { Burger } from "@mantine/core";
 import Link from "next/link";
 import { BlurFade } from "./magicui/blur-fade";
-import { MouseEventHandler, useRef } from "react";
+import { MouseEventHandler, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import Avatar from "./avatar";
@@ -28,6 +28,11 @@ export default function Nav() {
       toggle();
     }
   };
+
+  useEffect(() => {
+    // Re-fetch user session.
+    refetch();
+  }, [pathname]);
 
   return (
     <>
