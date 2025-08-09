@@ -2,8 +2,17 @@
 
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
-export default function SignOut() {
+export default function SignOut({
+  className,
+  spanClassName,
+  removeOverlay,
+}: {
+  className?: string;
+  spanClassName?: string;
+  removeOverlay?: Function | undefined;
+}) {
   const router = useRouter();
 
   return (
@@ -12,15 +21,21 @@ export default function SignOut() {
         await authClient.signOut({
           fetchOptions: {
             onSuccess: () => {
+              if (removeOverlay) {
+                removeOverlay();
+              }
               router.push("/");
             },
           },
         })
       }
       type="button"
-      className="border px-2 py-1 rounded-sm bg-blue-600 text-white cursor-pointer"
+      className={cn(
+        "border px-2 py-1 rounded-sm bg-blue-600 text-white cursor-pointer",
+        className
+      )}
     >
-      <span className="font-bold">Sign Out</span>
+      <span className={cn("font-bold", spanClassName)}>Sign Out</span>
     </button>
   );
 }
