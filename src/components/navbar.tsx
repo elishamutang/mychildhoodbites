@@ -93,6 +93,17 @@ export default function Nav() {
           Categories
         </Link>
 
+        {/* Sign-in */}
+        {pathname !== "/signin" && pathname !== "/signup" && !userSession && (
+          <Link
+            onClick={handleClick}
+            href="/signin"
+            className="text-2xl font-inter font-bold text-blue-600"
+          >
+            Sign In
+          </Link>
+        )}
+
         {/* Dashboard */}
         {userSession && (
           <Link
@@ -106,13 +117,11 @@ export default function Nav() {
 
         {/* Sign-out */}
         {userSession && (
-          <button
-            type="button"
-            className=" text-zinc-400"
-            onClick={handleClick}
-          >
-            <span className="text-2xl font-inter font-bold">Sign Out</span>
-          </button>
+          <SignOut
+            removeOverlay={handleClick}
+            className="text-zinc-400 rounded-none border-0 bg-transparent"
+            spanClassName="text-2xl font-bold"
+          />
         )}
       </nav>
     </>
