@@ -8,7 +8,7 @@ export default function Footer() {
         <a
           href="https://elishamutang.xyz"
           target="_blank"
-          className="font-inter font-bold text-stone-400 hover:text-green-600 transition delay-150"
+          className="font-inter font-bold text-stone-400 hover:text-gray-600 transition delay-150"
         >
           elishamutang
         </a>
