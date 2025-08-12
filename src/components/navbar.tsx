@@ -48,13 +48,13 @@ export default function Nav() {
         {/* Navigation */}
         <Link
           href="/products"
-          className="hover:text-white hover:bg-blue-600 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-lg text-blue-600"
+          className="hover:text-red-500 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-md text-black"
         >
-          Bites
+          Products
         </Link>
         <Link
           href="/categories"
-          className="hover:text-white hover:bg-green-600 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-lg text-green-600"
+          className="hover:text-red-500 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-md text-black"
         >
           Categories
         </Link>
@@ -63,7 +63,7 @@ export default function Nav() {
         {pathname !== "/signin" && pathname !== "/signup" && !userSession && (
           <Link
             href="/signin"
-            className="bg-green-600 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-lg text-white"
+            className="bg-red-500 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-md text-white"
           >
             Sign In
           </Link>
