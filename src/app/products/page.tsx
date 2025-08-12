@@ -42,9 +42,9 @@ export default async function Page({
 
   return (
     <section className="flex flex-col items-center md:border rounded-lg">
-      <Heading delay={0.25} className="text-blue-600 text-6xl mt-2">
-        Bites
-        <span className="text-green-600">.</span>
+      <Heading delay={0.25} className="text-black text-5xl md:text-6xl mt-2">
+        Delicacies
+        <span className="text-red-600">.</span>
       </Heading>
 
       {/* Search bar */}
