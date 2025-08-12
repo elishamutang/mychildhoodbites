@@ -2,16 +2,20 @@ import { BlurFade } from "./magicui/blur-fade";
 import Link from "next/link";
 import Image from "next/image";
 import AisKrim from "../../public/images/products/ais-krim.png";
-import { Category, Product, SubRegion } from "../../generated/prisma";
+import { Category, Product, Country } from "../../generated/prisma";
 import getProductImg from "@/lib/getProductImg";
 
 interface CompleteProduct extends Product {
-  SubRegion: SubRegion;
+  countries: Country[];
   Category: Category;
 }
 
 export default async function Card({ product }: { product: CompleteProduct }) {
   const imgSrc = await getProductImg(product.name);
+
+  const uniqueSubregions = Array.from(
+    new Set(product.countries.map((country) => country.subregion))
+  );
 
   return (
     <BlurFade
@@ -38,7 +42,9 @@ export default async function Card({ product }: { product: CompleteProduct }) {
             <h1 className="font-extrabold truncate">{product.name}</h1>
 
             {/* Sub Region */}
-            <p>{product.SubRegion.name}</p>
+            {uniqueSubregions.map((subregion, idx) => (
+              <p key={idx}>{subregion}</p>
+            ))}
           </div>
           <p className="text-zinc-500 h-[50px] mb-2 text-wrap overflow-hidden line-clamp-2">
             {product.description}

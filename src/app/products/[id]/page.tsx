@@ -14,20 +14,24 @@ export default async function Page({
   const product = await prisma.product.findUnique({
     where: { id: id },
     include: {
-      SubRegion: true,
+      countries: {
+        include: {
+          country: true,
+        },
+      },
       Category: true,
     },
-  });
-
-  // Get countries
-  const productOnCountries = await prisma.productsOnCountries.findMany({
-    where: { productId: product?.id },
-    include: { country: true },
   });
 
   if (!product) {
     notFound();
   }
+
+  // Map countries
+  const completeProduct = {
+    ...product,
+    countries: product.countries.map((country) => country.country),
+  };
 
   // Locate and load corresponding product image.
   const imgSrc = await getProductImg(product.name);
@@ -43,7 +47,7 @@ export default async function Page({
         </h1>
 
         {/* Sub Region */}
-        <p>{product.SubRegion.name}</p>
+        {/* <p>{productOnCountries.country.subregion}</p> */}
 
         {/* Category */}
         <section className="border w-max px-2 py-1 rounded-sm bg-black font-semibold text-white text-xs">
@@ -82,15 +86,15 @@ export default async function Page({
             Mostly enjoyed in these countries
           </h2>
           <div className="border flex flex-wrap items-start gap-3">
-            {productOnCountries.map((product) => (
+            {completeProduct.countries.map((country) => (
               <Flag
-                src={product.country.flag}
-                alt={product.country.name}
-                countryName={product.country.name}
+                src={country.flag}
+                alt={country.name}
+                countryName={country.name}
                 className="drop-shadow-xl/30 mb-2 w-[45px] md:w-[80px]"
                 width={80}
                 height={80}
-                key={product.countryId}
+                key={country.id}
               />
             ))}
           </div>
