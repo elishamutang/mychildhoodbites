@@ -24,8 +24,8 @@ export default function Search() {
           defaultValue={searchParams.get("name")?.toString()}
           name="product"
           type="text"
-          className="w-full px-1 py-1 focus:outline-hidden border-b-2 border-b border-b-zinc-300 focus:border-blue-600"
-          placeholder="Start discovering food here..."
+          className="w-full px-1 py-1 focus:outline-hidden border-b-2 border-b border-b-zinc-300 focus:border-red-600"
+          placeholder="Search food name here..."
           onChange={(e) => handleSearch(e.target.value)}
         />
       </section>
