@@ -1,26 +1,33 @@
 import Heading from "@/components/heading";
 import { BlurFade } from "@/components/magicui/blur-fade";
-import { Globe } from "@/components/magicui/globe";
+import LandingPagePicture from "../../public/images/landing-page-image-large.png";
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <section className="h-screen flex flex-col items-center justify-start text-3xl p-5 border rounded-lg w-full text-center">
-      <Heading delay={0.25 * 3}>
-        Around the World in <span className="text-blue-600">Childhood</span>
-        <span className="text-green-600">Bites.</span>
-      </Heading>
+    <section className="flex flex-col justify-start text-3xl w-full text-center">
+      <section className="relative h-full -z-10 bg-black">
+        <Image
+          src={LandingPagePicture}
+          loading="lazy"
+          alt="Asian guy sitting at table"
+          className="w-full h-screen object-cover opacity-12 bg-black"
+          quality={100}
+        />
+        <div className="absolute flex flex-col items-center top-60 left-0 lg:w-[80%] lg:left-20 xl:left-40 xl:top-70 2xl:left-40">
+          <Heading
+            delay={0.25 * 3}
+            className="text-center text-5xl px-2 text-white w-full"
+          >
+            Gather at the asian table
+          </Heading>
 
-      <BlurFade delay={0.25 * 3} inView className="md:max-w-[50%] mt-5">
-        <h2 className="md:text-[22px] sm:text-xl xl:text-xl lg:text-[16px] text-start md:text-center text-sm text-zinc-400 font-inter">
-          Journey back in time and across continents. Explore, share, and savor
-          beloved childhood foods from every culture.
-        </h2>
-      </BlurFade>
-
-      <section className="relative max-w-3xl size-full">
-        <BlurFade className="mt-10 rounded-lg" inView delay={0.25 * 3.5}>
-          <Globe className="lg:-top-32 -top-22 left-3 lg:left-15 w-xs xl:w-lg 2xl:w-2xl lg:w-lg md:w-lg md:-top-35 sm:w-lg sm:left-15" />
-        </BlurFade>
+          <BlurFade delay={0.25 * 3} inView className="">
+            <h2 className="md:text-[22px] text-center sm:text-xl xl:text-xl lg:text-[16px] text-sm text-zinc-400 font-inter">
+              where every dish tells a story.
+            </h2>
+          </BlurFade>
+        </div>
       </section>
     </section>
   );
