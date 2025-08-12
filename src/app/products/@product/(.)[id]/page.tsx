@@ -58,7 +58,7 @@ export default async function Page({
         </DialogHeader>
         <DialogFooter>
           <Link
-            className="text-sm border text-center py-1 border-zinc-300 px-2 rounded-sm hover:font-semibold hover:text-white hover:bg-green-700 transition duration-200"
+            className="text-sm border text-center py-1 border-zinc-300 px-2 rounded-sm hover:font-semibold hover:text-white hover:bg-black transition duration-200"
             href={`/products/${id}`}
             target="_blank"
           >

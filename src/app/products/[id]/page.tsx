@@ -39,14 +39,14 @@ export default async function Page({
         {/* Title */}
         <h1 className="font-extrabold mb-2 text-5xl">
           {product.name}
-          <span className="text-green-600">.</span>
+          <span className="text-red-600">.</span>
         </h1>
 
         {/* Sub Region */}
         <p>{product.SubRegion.name}</p>
 
         {/* Category */}
-        <section className="border w-max px-2 py-1 rounded-sm bg-blue-600 font-semibold text-white text-xs">
+        <section className="border w-max px-2 py-1 rounded-sm bg-black font-semibold text-white text-xs">
           {product.Category.name}
         </section>
 

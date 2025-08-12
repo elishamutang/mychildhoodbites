@@ -46,13 +46,14 @@ export default async function Card({ product }: { product: CompleteProduct }) {
         </div>
 
         <div className="flex justify-between">
-          <div className="text-xs border rounded-md p-1 font-semibold hover:text-white hover:bg-blue-600 transition duration-150">
+          {/* TODO: Update with link to category */}
+          <div className="text-xs border rounded-md p-1 font-semibold transition duration-150">
             {product.Category.name}
           </div>
           <Link
             scroll={false}
             href={`/products/${product.id}`}
-            className="text-xs border rounded-md py-1 px-2 hover:text-white font-semibold hover:bg-green-700 transition duration-150"
+            className="text-xs border rounded-md py-1 px-2 hover:text-white font-semibold hover:bg-black transition duration-150"
           >
             View
           </Link>
