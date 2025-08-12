@@ -19,7 +19,7 @@ export default function Heading({
       delay={delay}
       inView
       className={cn(
-        `md:text-6xl lg:text-[65px] xl:text-7xl 2xl:text-8xl sm:text-6xl text-start md:text-center text-[38px] h-content md:max-w-[80%] font-inter font-extrabold`,
+        `md:text-6xl lg:text-[65px] xl:text-7xl 2xl:text-8xl sm:text-6xl md:text-center text-[38px] h-content font-inter font-extrabold`,
         className
       )}
       {...props}
