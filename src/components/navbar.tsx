@@ -50,7 +50,7 @@ export default function Nav() {
           href="/products"
           className="hover:text-red-500 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-md text-black"
         >
-          Products
+          Delicacies
         </Link>
         <Link
           href="/categories"
@@ -85,14 +85,14 @@ export default function Nav() {
       >
         <Link
           href="/products"
-          className="text-2xl font-inter font-bold text-blue-600"
+          className="text-2xl font-inter font-bold text-black"
           onClick={handleClick}
         >
-          Bites
+          Delicacies
         </Link>
         <Link
           href="/categories"
-          className="text-2xl font-inter font-bold text-green-600"
+          className="text-2xl font-inter font-bold text-black"
           onClick={handleClick}
         >
           Categories
@@ -103,7 +103,7 @@ export default function Nav() {
           <Link
             onClick={handleClick}
             href="/signin"
-            className="text-2xl font-inter font-bold text-blue-600"
+            className="text-2xl font-inter font-bold text-red-500"
           >
             Sign In
           </Link>
@@ -113,7 +113,7 @@ export default function Nav() {
         {userSession && (
           <Link
             href="/dashboard"
-            className="text-2xl font-inter font-bold text-blue-600"
+            className="text-2xl font-inter font-bold text-red-500"
             onClick={handleClick}
           >
             Dashboard
