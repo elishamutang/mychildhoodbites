@@ -18,8 +18,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "mychildhoodbites.",
-  description: "Trip down to memory lane.",
+  title: "The Asian Table.",
+  description: "Your favorite table.",
 };
 
 export default function RootLayout({
