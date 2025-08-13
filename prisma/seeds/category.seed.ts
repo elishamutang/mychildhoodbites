@@ -2,34 +2,34 @@ import { PrismaClient, Prisma } from "../../generated/prisma";
 
 const categoryData: Prisma.CategoryCreateInput[] = [
     {
-        name: 'School Lunchbox Classics'
+        name: 'Noodle Dishes'
     },
     {
-        name: 'After-School Snacks'
+        name: 'Rice Dishes'
     },
     {
-        name: 'Homemade & Family Recipes'
+        name: 'Soups & Stews'
     },
     {
-        name: 'Breakfast Favorites'
+        name: 'Grilled & Barbecue'
     },
     {
-        name: 'Holiday Treats'
+        name: 'Salads'
     },
     {
-        name: 'Frozen Foods & Treats'
+        name: 'Curry Dishes'
     },
     {
-        name: 'Sweet Snacks & Candy'
+        name: 'Street Food Snacks'
     },
     {
-        name: 'Savory Snacks'
+        name: 'Bread & Buns'
     },
     {
-        name: 'Regional/Traditional Childhood Foods'
+        name: 'Meat Dishes'
     },
     {
-        name: 'Beverages'
+        name: 'Desserts & Sweets'
     }
 ]
 
