@@ -14,7 +14,7 @@ export default function Home() {
           className="w-full h-screen object-cover opacity-12 bg-black"
           quality={100}
         />
-        <div className="absolute flex flex-col items-center top-60 left-0 lg:w-[80%] lg:left-20 xl:left-40 xl:top-70 2xl:left-40">
+        <div className="absolute flex flex-col items-center top-60 left-0 lg:w-[80%] lg:left-20 xl:left-40 xl:top-70 2xl:left-35">
           <Heading
             delay={0.25 * 3}
             className="text-center text-5xl px-2 text-white w-full"
