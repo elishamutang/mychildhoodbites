@@ -31,7 +31,7 @@ export default function SignOut({
       }
       type="button"
       className={cn(
-        "border px-2 py-1 rounded-sm bg-blue-600 text-white cursor-pointer",
+        "border px-2 py-1 rounded-sm bg-red-600 text-white cursor-pointer",
         className
       )}
     >

@@ -48,13 +48,13 @@ export default function Nav() {
         {/* Navigation */}
         <Link
           href="/products"
-          className="hover:text-red-500 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-md text-black"
+          className="hover:text-red-500 hover:border-red-500 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-md text-black"
         >
           Delicacies
         </Link>
         <Link
           href="/categories"
-          className="hover:text-red-500 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-md text-black"
+          className="hover:text-red-500 hover:border-red-500 transition duration-300 text-lg font-inter font-bold border py-1 px-2 rounded-md text-black"
         >
           Categories
         </Link>
