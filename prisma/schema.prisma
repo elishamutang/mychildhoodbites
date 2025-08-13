@@ -70,21 +70,6 @@ model Verification {
   updatedAt  DateTime?
 }
 
-// model Region {
-//   id Int @id @default(autoincrement())
-//   name String @unique @db.Text()
-//   SubRegion SubRegion[]
-// }
-
-// model SubRegion {
-//   id Int @id @default(autoincrement())
-//   name String @unique @db.Text()
-//   regionId Int
-//   Region Region @relation(fields: [regionId], references: [id])
-//   Country Country[]
-//   Product Product[]
-// }
-
 model Country {
   id Int @id @default(autoincrement())
   name String @unique @db.Text()
@@ -100,16 +85,15 @@ model Product {
   id Int @id @default(autoincrement())
   name String @unique @db.VarChar(255)
   description String @db.VarChar(255)
-  lore String? @db.VarChar(255)
+  lore String? @db.Text()
   image String? @db.VarChar(255)
-  Category Category @relation(fields: [categoryId], references: [id])
+  category ProductsOnCategories[]
   countries ProductsOnCountries[]
-  categoryId Int
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
-// Pivot table (or JOIN table)
+// Pivot table for products and countries (or JOIN table)
 model ProductsOnCountries {
   product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
   productId Int
@@ -119,10 +103,19 @@ model ProductsOnCountries {
   @@id([productId, countryId])
 }
 
+model ProductsOnCategories {
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId Int
+  category Category @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId Int
+
+  @@id([productId, categoryId])
+}
+
 model Category {
   id Int @id @default(autoincrement())
   name String @unique @db.VarChar(255)
-  Product Product[]
+  product ProductsOnCategories[]
 }
 
 model Collection {
