@@ -1,5 +1,5 @@
-# mychildhoodbites (WIP)
+# The Asian Table (WIP)
 
-Take a trip down memory lane.
+Gather at the table.
 
-![landing page](public/images/landing-page.png)
+![landing page](public/images/landing_page.png)
