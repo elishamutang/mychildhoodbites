@@ -7,7 +7,7 @@ import getProductImg from "@/lib/getProductImg";
 
 interface CompleteProduct extends Product {
   countries: Country[];
-  Category: Category;
+  category: Category[];
 }
 
 export default async function Card({ product }: { product: CompleteProduct }) {
@@ -53,9 +53,18 @@ export default async function Card({ product }: { product: CompleteProduct }) {
 
         <div className="flex justify-between">
           {/* TODO: Update with link to category */}
-          <div className="text-xs border rounded-md p-1 font-semibold transition duration-150">
-            {product.Category.name}
-          </div>
+          <section className="flex gap-2">
+            <div className="text-xs border rounded-md p-1 font-semibold transition duration-150">
+              {product.category[0].name}
+            </div>
+
+            {product.category.length > 1 && (
+              <div className="text-xs border rounded-md p-1 px-2 font-semibold transition duration-150">
+                +{product.category.length - 1}
+              </div>
+            )}
+          </section>
+
           <Link
             scroll={false}
             href={`/products/${product.id}`}

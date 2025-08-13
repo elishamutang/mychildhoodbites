@@ -8,7 +8,7 @@ import Loading from "@/components/loading";
 
 interface CompleteProduct extends Product {
   countries: Country[];
-  Category: Category;
+  category: Category[];
 }
 
 export default async function Page({
@@ -24,7 +24,11 @@ export default async function Page({
           country: true,
         },
       },
-      Category: true,
+      category: {
+        include: {
+          category: true,
+        },
+      },
     },
   });
 
@@ -43,7 +47,11 @@ export default async function Page({
             country: true,
           },
         },
-        Category: true,
+        category: {
+          include: {
+            category: true,
+          },
+        },
       },
     });
   }
@@ -53,6 +61,7 @@ export default async function Page({
     return {
       ...product,
       countries: product.countries.map((country) => country.country),
+      category: product.category.map((category) => category.category),
     };
   });
 

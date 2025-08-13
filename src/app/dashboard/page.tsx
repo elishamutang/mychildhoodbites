@@ -24,8 +24,8 @@ export default async function Page() {
   return (
     <section className="font-inter border">
       {/* Heading */}
-      <h1 className="text-3xl md:text-5xl font-bold text-blue-600">
-        Dashboard
+      <h1 className="text-3xl md:text-5xl font-bold text-black">
+        Dashboard<span className="text-red-500">.</span>
       </h1>
 
       {/* Brief information */}
@@ -48,19 +48,6 @@ export default async function Page() {
           )}
         </div>
         <p>Joined on {session.user.createdAt.toLocaleDateString()}</p>
-      </section>
-
-      {/* Bites */}
-
-      <section>
-        <h1 className="border text-2xl md:text-3xl font-semibold text-green-600">
-          I have tried...
-        </h1>
-      </section>
-      <section>
-        <h1 className="text-2xl md:text-3xl font-semibold text-green-600">
-          I want to try...
-        </h1>
       </section>
     </section>
   );
