@@ -288,20 +288,18 @@ const productData = [
         }
     },
     {
-        name: "Tonka",
-        description: "Breaded, deep-fried pork cutlet.",
-        lore: "Tonka reflects influences from Japanese cuisine that spread throughout Southeast Asia, particularly in urban areas, showcasing fusion in modern street food culture.",
+        name: "Kaya Toast",
+        description: "Toasted bread spread with kaya, a sweet coconut egg jam, often served with butter and soft-boiled eggs on the side.",
+        lore: "Kaya Toast is a quintessential Singaporean breakfast and snack, reflecting the multicultural influences of Malay, Chinese, and British colonial cuisine. It embodies the convenience and communal atmosphere of traditional kopitiam (coffee shops) and is cherished across Southeast Asia as a nostalgic comfort food.",
         countries: {
             create: [
-                { country: { connect: { id: 9 } } }, // Thailand
+                { country: { connect: { id: 5 } } }, // Thailand
                 { country: { connect: { id: 8 } } }  // Singapore
             ]
         },
         category: {
             create: [
-                { category: { connect: { id: 9 } } },
-                { category: { connect: { id: 4 } } },
-                { category: { connect: { id: 7 } } }
+                { category: { connect: { id: 8 } } },
             ]
         }
     },
