@@ -39,7 +39,10 @@ export default async function Card({ product }: { product: CompleteProduct }) {
       <div className="p-2 flex flex-col truncate">
         <div className="flex flex-col gap-2">
           <div className="flex justify-between gap-2 w-full">
-            <h1 className="font-extrabold truncate">{product.name}</h1>
+            <h1 className="font-extrabold truncate border bg-black text-white px-1 rounded-sm">
+              {product.name}
+              <span className="text-red-600">.</span>
+            </h1>
 
             {/* Sub Region */}
             {uniqueSubregions.map((subregion, idx) => (
