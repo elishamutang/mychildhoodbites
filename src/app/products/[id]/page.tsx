@@ -19,7 +19,11 @@ export default async function Page({
           country: true,
         },
       },
-      Category: true,
+      category: {
+        include: {
+          category: true,
+        },
+      },
     },
   });
 
@@ -31,6 +35,7 @@ export default async function Page({
   const completeProduct = {
     ...product,
     countries: product.countries.map((country) => country.country),
+    category: product.category.map((category) => category.category),
   };
 
   // Locate and load corresponding product image.
@@ -46,12 +51,16 @@ export default async function Page({
           <span className="text-red-600">.</span>
         </h1>
 
-        {/* Sub Region */}
-        {/* <p>{productOnCountries.country.subregion}</p> */}
-
         {/* Category */}
-        <section className="border w-max px-2 py-1 rounded-sm bg-black font-semibold text-white text-xs">
-          {product.Category.name}
+        <section className="flex gap-2">
+          {completeProduct.category.map((category) => (
+            <section
+              key={category.id}
+              className="border w-max px-2 py-1 rounded-sm bg-black font-semibold text-white text-xs"
+            >
+              {category.name}
+            </section>
+          ))}
         </section>
 
         {/* Image */}

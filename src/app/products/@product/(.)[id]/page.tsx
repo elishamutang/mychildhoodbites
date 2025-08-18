@@ -39,7 +39,7 @@ export default async function Page({
           {imgSrc && (
             <Image
               objectFit="contain"
-              className="self-center w-60 h-60 md:w-70 h-70"
+              className="self-center w-60 h-60 md:w-80 h-80"
               src={imgSrc ?? null}
               width={400}
               height={400}
